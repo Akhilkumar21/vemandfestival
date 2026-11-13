@@ -99,9 +99,10 @@ export const GalleryLightbox: React.FC<GalleryLightboxProps> = ({ gallery, isTel
           >
             <img
               src={item.src}
-              alt={isTelugu ? item.titleTelugu : item.title}
+              alt={`${isTelugu ? item.titleTelugu : item.title} - వేమండ జపమాల మాత క్షేత్రం | Vemanda Festival`}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
               <span className="text-[10px] font-bold text-amber-300 uppercase tracking-wider mb-1">
@@ -146,12 +147,9 @@ export const GalleryLightbox: React.FC<GalleryLightboxProps> = ({ gallery, isTel
             <div className="flex-grow flex items-center justify-center bg-slate-950 max-h-[70vh] p-2">
               <img
                 src={filteredItems[currentIndex].src}
-                alt={
-                  isTelugu
-                    ? filteredItems[currentIndex].titleTelugu
-                    : filteredItems[currentIndex].title
-                }
+                alt={`${isTelugu ? filteredItems[currentIndex].titleTelugu : filteredItems[currentIndex].title} - వేమండ జపమాల మాత | Vemanda Festival`}
                 className="max-w-full max-h-[68vh] object-contain rounded-lg"
+                decoding="async"
               />
             </div>
 

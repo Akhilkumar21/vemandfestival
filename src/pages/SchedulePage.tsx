@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FestivalData } from '../types/festival';
 import { ScheduleTimeline } from '../components/ScheduleTimeline';
+import { SeoHead } from '../components/SeoHead';
 import { Calendar, ChevronRight, Home, Flag, Video, Image as ImageIcon, Clock } from 'lucide-react';
 
 interface SchedulePageProps {
@@ -13,6 +14,21 @@ interface SchedulePageProps {
 export const SchedulePage: React.FC<SchedulePageProps> = ({ data, isTelugu, searchQuery }) => {
   return (
     <div className="flex-grow py-8 max-w-7xl mx-auto px-4 md:px-8">
+      <SeoHead
+        title={
+          isTelugu
+            ? 'వేమండ వార్షిక మహోత్సవ కార్యక్రమ పట్టిక (అక్టోబర్ 27-30) | Vemanda Festival Schedule'
+            : 'Vemanda Festival Schedule & Timings (October 27-30) | Vemanda Feast Program'
+        }
+        description={
+          isTelugu
+            ? 'వేమండ జపమాల మాత వార్షిక మహోత్సవాల పూర్తి కార్యక్రమ వివరాలు. అక్టోబర్ 27 నుండి 30 వరకు దివ్యబలిపూజలు, ఆరాధన, మేళతాళాల ఊరేగింపు మరియు మహా రథోత్సవ సమయాలు.'
+            : 'Full 4-day timetable for Vemanda Japamala Matha Annual Festival (October 27-30). Mass timings, flag hoistings, adoration, fellowship banquets, and chariot procession in Vemanda Village.'
+        }
+        canonicalPath="/schedule"
+        keywords="Vemanda, Vemanda Schedule, Vemanda Festival Timings, Vemanda Mass Timings, వేమండ, కార్యక్రమ పట్టిక, Vemanda Village"
+      />
+
       {/* Breadcrumb Navigation */}
       <nav className="flex items-center gap-2 text-xs text-slate-500 mb-6">
         <Link to="/" className="hover:text-amber-800 flex items-center gap-1 font-medium transition-colors">

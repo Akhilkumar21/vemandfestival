@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FestivalData } from '../types/festival';
 import { FlagsShowcase } from '../components/FlagsShowcase';
+import { SeoHead } from '../components/SeoHead';
 import { Flag, ChevronRight, Home, Calendar, Video, Image as ImageIcon, Sparkles } from 'lucide-react';
 
 interface FlagsPageProps {
@@ -13,6 +14,21 @@ interface FlagsPageProps {
 export const FlagsPage: React.FC<FlagsPageProps> = ({ data, isTelugu, searchQuery }) => {
   return (
     <div className="flex-grow py-8 max-w-7xl mx-auto px-4 md:px-8">
+      <SeoHead
+        title={
+          isTelugu
+            ? 'వేమండ 4 పవిత్ర పతాక ఆవిష్కరణలు | Vemanda Festival Sacred Flags'
+            : 'Vemanda 4 Sacred Flag Hoistings | Vemanda Festival Traditions'
+        }
+        description={
+          isTelugu
+            ? 'వేమండ జపమాల మాత క్షేత్రంలో అక్టోబర్ 27 నుండి 30 వరకు జరిగే 4 పవిత్ర పతాక ఆవిష్కరణలు, ఉదయం 8 గంటల ఆర్.సి.యం. దేవాలయ ఊరేగింపు మరియు దివ్యబలిపూజల వివరాలు.'
+            : 'Detailed guide to the 4 Sacred Flag Hoistings (October 27-30) at Vemanda Japamala Matha Shrine in Vemanda Village, including daily morning RCM church processions and choir hymns.'
+        }
+        canonicalPath="/flags"
+        keywords="Vemanda, Vemanda Festival Flags, Vemanda Sacred Flags, Vemanda Japamala Matha, వేమండ, పతాక ఆవిష్కరణ, Vemanda Village"
+      />
+
       {/* Breadcrumb Navigation */}
       <nav className="flex items-center gap-2 text-xs text-slate-500 mb-6">
         <Link to="/" className="hover:text-amber-800 flex items-center gap-1 font-medium transition-colors">

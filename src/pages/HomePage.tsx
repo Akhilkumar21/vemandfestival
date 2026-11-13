@@ -5,6 +5,7 @@ import { FlagsShowcase } from '../components/FlagsShowcase';
 import { ScheduleTimeline } from '../components/ScheduleTimeline';
 import { VideoExperience } from '../components/VideoExperience';
 import { GalleryLightbox } from '../components/GalleryLightbox';
+import { SeoHead } from '../components/SeoHead';
 import {
   Flag,
   Calendar,
@@ -21,6 +22,7 @@ import {
   FileText,
   Flame,
   PlusCircle,
+  MapPin,
 } from 'lucide-react';
 
 interface HomePageProps {
@@ -67,6 +69,22 @@ export const HomePage: React.FC<HomePageProps> = ({ data, isTelugu, searchQuery 
 
   return (
     <main className="flex-grow">
+      {/* Dynamic SEO Metadata for Homepage */}
+      <SeoHead
+        title={
+          isTelugu
+            ? 'వేమండ - వేమండ జపమాల మహోత్సవాలు | Vemanda Festival & Japamala Matha Shrine'
+            : 'Vemanda - Vemanda Japamala Matha Annual Feast | Vemanda Festival Portal'
+        }
+        description={
+          isTelugu
+            ? 'వేమండ జపమాల మాత క్షేత్ర వార్షిక మహోత్సవాలు (అక్టోబర్ 27-30). కృష్ణా జిల్లా, వెంట్రప్రగడ విచారణ వేమండ గ్రామ పవిత్ర పతాక ఆవిష్కరణలు, దివ్యబలిపూజలు, ప్రార్థనల డాష్‌బోర్డ్, మరియు మహా రథోత్సవ సమాచారం.'
+            : 'Official celebration portal for Vemanda Festival (వేమండ జపమాల మహోత్సవాలు) at Vemanda Japamala Matha Shrine in Vemanda Village, Ventrapragada Parish. Complete schedule for October 27-30, 4 sacred flags, mass timings, prayer request dashboard, and chariot procession.'
+        }
+        canonicalPath="/"
+        keywords="Vemanda, Vemanda Festival, Vemanda Japamala Matha, Vemanda Annual Festival, Vemanda Mahotsavalu, Vemanda Village, వేమండ, వేమండ జపమాల మహోత్సవాలు, Ventrapragada, Krishna District, Flag Hoisting, Rathotsavam, Theru Pradakshina, Catholic Feast"
+      />
+
       {/* Majestic Hero Banner */}
       <section className="relative overflow-hidden pt-10 pb-16 md:py-20 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
@@ -218,8 +236,14 @@ export const HomePage: React.FC<HomePageProps> = ({ data, isTelugu, searchQuery 
               <div className="relative rounded-3xl overflow-hidden bg-white p-3 border border-slate-200 shadow-2xl">
                 <img
                   src="/images/hero-shrine-background.jpeg"
-                  alt="Vemanda Illuminated Flag Pole and Mother Mary"
+                  alt={
+                    isTelugu
+                      ? 'వేమండ జపమాల మాత క్షేత్రం - రాత్రి వేళ దీపాలంకరణతో ధ్వజస్తంభం | Vemanda Festival'
+                      : 'Vemanda Japamala Matha Shrine - Illuminated Sacred Flag Mast at Night | Vemanda Festival'
+                  }
                   className="w-full h-auto max-h-[460px] object-cover rounded-2xl shadow-md"
+                  loading="eager"
+                  decoding="async"
                 />
                 <div className="mt-3 text-center">
                   <h4 className="text-sm font-bold text-slate-900">
@@ -239,6 +263,114 @@ export const HomePage: React.FC<HomePageProps> = ({ data, isTelugu, searchQuery 
 
       {/* Main Content Sections with Links to Dedicated Pages */}
       <div className="max-w-7xl mx-auto px-4 md:px-8 space-y-16 py-10">
+        {/* Comprehensive SEO Content Section: About Vemanda Village & The Japamala Matha Feast */}
+        <section id="about-vemanda" className="rounded-3xl bg-white border border-slate-200 p-6 md:p-10 shadow-sm space-y-8">
+          {/* Header */}
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 border border-amber-300 text-amber-900 text-xs font-bold uppercase tracking-wider shadow-xs">
+              <Church className="w-4 h-4 text-amber-600" />
+              <span>{isTelugu ? 'వేమండ క్షేత్ర విశేషాలు' : 'About Vemanda & Sacred Feast'}</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+              {isTelugu
+                ? 'వేమండ జపమాల మాత క్షేత్ర చరిత్ర & వార్షిక మహోత్సవ వైభవం'
+                : 'Vemanda Japamala Matha Shrine: History, Traditions & Annual Festival'}
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              {isTelugu
+                ? 'ఆంధ్రప్రదేశ్ రాష్ట్రం, కృష్ణా జిల్లాలోని పవిత్ర పుణ్యక్షేత్రం వేమండ. వెంట్రప్రగడ విచారణ పరిధిలోని ఈ దివ్య గ్రామంలో ప్రతి సంవత్సరం అక్టోబర్ 27 నుండి 30 వరకు జపమాల మాత వార్షిక మహోత్సవాలు అత్యంత భక్తి ప్రపత్తులతో నిర్వహించబడతాయి.'
+                : 'Vemanda is a renowned pilgrim village located in Ventrapragada Parish, Krishna District, Andhra Pradesh. Every year from October 27 to October 30, the sacred Annual Feast of Japamala Matha (Our Lady of the Rosary) is celebrated with solemn Catholic traditions and community devotion.'}
+            </p>
+          </div>
+
+          {/* 3 Pillar Cards: Vemanda Village, Japamala Matha Shrine, Sacred Festival Traditions */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* 1. Vemanda Village & Parish */}
+            <div className="p-6 rounded-2xl bg-slate-50/80 border border-slate-200 hover:border-amber-400 transition-all space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center font-bold shadow-xs">
+                <MapPin className="w-5 h-5" />
+              </div>
+              <h3 className="text-base font-bold text-slate-900">
+                {isTelugu ? 'వేమండ గ్రామము (Vemanda Village)' : 'Vemanda Village & Parish'}
+              </h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                {isTelugu
+                  ? 'కృష్ణా జిల్లా, వెంట్రప్రగడ ఆర్.సి.యం. విచారణ పరిధిలోని వేమండ గ్రామం భక్తి విశ్వాసాలకు నిలయం. మరియమాత అనుగ్రహం కోసం రాష్ట్రవ్యాప్తంగా పలు ప్రాంతాల నుండి భక్తులు వేమండ మహోత్సవాలకు విచ్చేస్తారు.'
+                  : 'Nestled in Krishna District under the historical R.C.M. Church Ventrapragada Parish jurisdiction, Vemanda Village is a vibrant pilgrimage center drawing thousands of Catholic families, pilgrims, and devotees across Andhra Pradesh.'}
+              </p>
+            </div>
+
+            {/* 2. Vemanda Japamala Matha Shrine */}
+            <div className="p-6 rounded-2xl bg-slate-50/80 border border-slate-200 hover:border-blue-400 transition-all space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold shadow-xs">
+                <Sparkles className="w-5 h-5" />
+              </div>
+              <h3 className="text-base font-bold text-slate-900">
+                {isTelugu ? 'జపమాల మాత క్షేత్ర విశిష్టత' : 'Vemanda Japamala Matha Shrine'}
+              </h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                {isTelugu
+                  ? '"తరతరముల వారు నన్ను ధన్యురాలని పిలిచెదరు" (లూకా 1:48) అనే దివ్య లేఖన ప్రేరణతో నిర్మించబడిన ఈ క్షేత్రంలో జపమాల మాత తల్లి భక్తుల మొరలను ఆలకించి కోరిన వరాలను అనుగ్రహించే కరుణామయిగా ప్రసిద్ధి చెందింది.'
+                  : 'Inspired by the sacred scripture "All generations will call me blessed" (Luke 1:48), the Vemanda Japamala Matha Shrine stands as a lighthouse of intercessory prayer, maternal grace, and divine solace for all who seek Mother Mary’s blessing.'}
+              </p>
+            </div>
+
+            {/* 3. Sacred Festival & Traditions */}
+            <div className="p-6 rounded-2xl bg-slate-50/80 border border-slate-200 hover:border-emerald-400 transition-all space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold shadow-xs">
+                <Calendar className="w-5 h-5" />
+              </div>
+              <h3 className="text-base font-bold text-slate-900">
+                {isTelugu ? '4 దినాల మహోత్సవ విశేషాలు' : '4-Day Annual Festival Events'}
+              </h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                {isTelugu
+                  ? 'అక్టోబర్ 27న పవిత్ర స్థూప ప్రతిష్ఠ, మొదటి పతాకంతో ప్రారంభమై, ప్రతిరోజు ఉదయం 8:00 గంటలకు ఆర్.సి.యం. దేవాలయం నుండి మేళతాళాలతో మరిమాత పతాక ఊరేగింపు, అక్టోబర్ 30న సమిష్టి దివ్యబలిపూజ & మహా తేరు రథోత్సవంతో వేడుకలు ముగుస్తాయి.'
+                  : 'Beginning on Oct 27 with Stupa blessing & 1st Flag Hoisting, continuing with daily 8 AM musical flag processions from RCM Church, and culminating on Oct 30 with Concelebrated High Mass and the Grand Chariot (Theru) Street Procession.'}
+              </p>
+            </div>
+          </div>
+
+          {/* Informative Highlights Strip */}
+          <div className="p-5 rounded-2xl bg-gradient-to-r from-amber-50 via-slate-50 to-blue-50 border border-slate-200/80 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center shrink-0 font-bold">
+                🚩
+              </div>
+              <div>
+                <span className="font-bold text-slate-900 block">{isTelugu ? '4 పవిత్ర పతాకాలు' : '4 Sacred Flags'}</span>
+                <span className="text-slate-500">{isTelugu ? 'అక్టోబర్ 27-30 ఆవిష్కరణలు' : 'October 27-30 Hoistings'}</span>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-lg bg-rose-100 text-rose-800 flex items-center justify-center shrink-0 font-bold">
+                🤰
+              </div>
+              <div>
+                <span className="font-bold text-slate-900 block">{isTelugu ? 'సంతాన & సుఖ ప్రసవం' : 'Pregnancy Blessings'}</span>
+                <span className="text-slate-500">{isTelugu ? 'ప్రత్యేక ప్రార్థనా విన్నపాలు' : 'Dedicated Petitions'}</span>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center shrink-0 font-bold">
+                🛕
+              </div>
+              <div>
+                <span className="font-bold text-slate-900 block">{isTelugu ? 'మహా తేరు రథోత్సవం' : 'Grand Chariot (Theru)'}</span>
+                <span className="text-slate-500">{isTelugu ? 'అక్టోబర్ 30 సా॥ 4:00 గం॥లకు' : 'Oct 30 at 4:00 PM'}</span>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-lg bg-purple-100 text-purple-800 flex items-center justify-center shrink-0 font-bold">
+                🎵
+              </div>
+              <div>
+                <span className="font-bold text-slate-900 block">{isTelugu ? 'వేమండ గాయక బృందం' : 'Vemanda Choir Team'}</span>
+                <span className="text-slate-500">{isTelugu ? 'భక్తి సంకీర్తనల సమర్పణ' : 'Sacred Liturgical Hymns'}</span>
+              </div>
+            </div>
+          </div>
+        </section>
         {/* Featured Section: Devotee Prayer Petitions Dashboard & Highlights */}
         <section className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-amber-500/10 via-rose-500/10 to-emerald-500/10 border-2 border-amber-300/80 p-6 md:p-8 shadow-sm">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">

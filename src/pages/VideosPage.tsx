@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FestivalData } from '../types/festival';
 import { VideoExperience } from '../components/VideoExperience';
+import { SeoHead } from '../components/SeoHead';
 import { Video, ChevronRight, Home, Flag, Calendar, Image as ImageIcon, PlayCircle } from 'lucide-react';
 
 interface VideosPageProps {
@@ -13,6 +14,21 @@ interface VideosPageProps {
 export const VideosPage: React.FC<VideosPageProps> = ({ data, isTelugu, searchQuery }) => {
   return (
     <div className="flex-grow py-8 max-w-7xl mx-auto px-4 md:px-8">
+      <SeoHead
+        title={
+          isTelugu
+            ? 'వేమండ వార్షిక మహోత్సవ ప్రత్యక్ష వీడియోలు (5) | Vemanda Festival Videos'
+            : 'Vemanda Festival Devotional Videos (5 HD Highlights) | Vemanda Feast'
+        }
+        description={
+          isTelugu
+            ? 'వేమండ జపమాల మాత క్షేత్ర వార్షిక మహోత్సవాల 5 ప్రత్యక్ష HD వీడియోలు. పతాక ఆవిష్కరణ, మేళతాళాల ఊరేగింపు, సత్య టీవీ ప్రసారాలు మరియు మహా రథోత్సవ దృశ్యాలు.'
+            : 'Watch 5 HD devotional video highlights from Vemanda Japamala Matha Shrine Annual Festival in Vemanda Village: flag hoistings, Satya TV news coverage, and grand chariot street procession.'
+        }
+        canonicalPath="/videos"
+        keywords="Vemanda, Vemanda Videos, Vemanda Festival Video, Vemanda Japamala Matha, వేమండ, వీడియోలు, Vemanda Village Rathotsavam"
+      />
+
       {/* Breadcrumb Navigation */}
       <nav className="flex items-center gap-2 text-xs text-slate-500 mb-6">
         <Link to="/" className="hover:text-amber-800 flex items-center gap-1 font-medium transition-colors">

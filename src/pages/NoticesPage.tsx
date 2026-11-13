@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FestivalData } from '../types/festival';
+import { SeoHead } from '../components/SeoHead';
 import {
   Bell,
   ChevronRight,
@@ -69,6 +70,21 @@ export const NoticesPage: React.FC<NoticesPageProps> = ({ data, isTelugu, search
 
   return (
     <div className="flex-grow py-8 max-w-7xl mx-auto px-4 md:px-8">
+      <SeoHead
+        title={
+          isTelugu
+            ? 'వేమండ ముఖ్య గమనికలు, నిబంధనలు & FAQ | Vemanda Festival Notices'
+            : 'Vemanda Festival Notices, Devotee Guidelines & FAQ | Vemanda Feast'
+        }
+        description={
+          isTelugu
+            ? 'వేమండ జపమాల మాత క్షేత్ర వార్షిక మహోత్సవాల భక్తుల గమనికలు, క్రమశిక్షణా నియమాలు, వెంట్రప్రగడ విచారణ పరిధి మరియు తరచుగా అడిగే ప్రశ్నలు (FAQ).'
+            : 'Important notices, pilgrim guidelines, discipline rules, parish jurisdiction, and devotional FAQs for Vemanda Japamala Matha Shrine Annual Festival in Vemanda Village.'
+        }
+        canonicalPath="/notices"
+        keywords="Vemanda, Vemanda Notices, Vemanda FAQ, Vemanda Japamala Matha Guidelines, వేమండ, గమనికలు, Vemanda Village"
+      />
+
       {/* Breadcrumb Navigation */}
       <nav className="flex items-center gap-2 text-xs text-slate-500 mb-6">
         <Link to="/" className="hover:text-amber-800 flex items-center gap-1 font-medium transition-colors">

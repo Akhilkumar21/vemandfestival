@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FestivalData } from '../types/festival';
 import { GalleryLightbox } from '../components/GalleryLightbox';
+import { SeoHead } from '../components/SeoHead';
 import { Image as ImageIcon, ChevronRight, Home, Flag, Calendar, Video, Sparkles } from 'lucide-react';
 
 interface GalleryPageProps {
@@ -13,6 +14,21 @@ interface GalleryPageProps {
 export const GalleryPage: React.FC<GalleryPageProps> = ({ data, isTelugu, searchQuery }) => {
   return (
     <div className="flex-grow py-8 max-w-7xl mx-auto px-4 md:px-8">
+      <SeoHead
+        title={
+          isTelugu
+            ? 'వేమండ చిత్ర మాలిక (13 హై-రెస్ ఫోటోలు) | Vemanda Festival Gallery'
+            : 'Vemanda Photo Gallery (13 High-Res Photos) | Vemanda Japamala Matha Shrine'
+        }
+        description={
+          isTelugu
+            ? 'వేమండ జపమాల మాత క్షేత్ర 13 అరుదైన హై-రెసొల్యూషన్ ఛాయాచిత్రాలు: పవిత్ర స్వరూపాలు, ధ్వజస్తంభం, దీపాలంకరణ, రథోత్సవం మరియు ఆహ్వాన పత్రికలు.'
+            : 'Explore 13 high-resolution photos of Vemanda Japamala Matha Shrine Annual Festival: sacred statues, illuminated flag mast, palm chariot procession, and official pamphlets in Vemanda Village.'
+        }
+        canonicalPath="/gallery"
+        keywords="Vemanda, Vemanda Photos, Vemanda Gallery, Vemanda Japamala Matha Photos, వేమండ, చిత్ర మాలిక, Vemanda Village"
+      />
+
       {/* Breadcrumb Navigation */}
       <nav className="flex items-center gap-2 text-xs text-slate-500 mb-6">
         <Link to="/" className="hover:text-amber-800 flex items-center gap-1 font-medium transition-colors">

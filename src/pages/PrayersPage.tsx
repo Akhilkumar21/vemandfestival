@@ -28,12 +28,9 @@ import {
   getStoredPrayerRequests,
   incrementAmenCount,
 } from '../utils/prayerStorage';
-import {
-  exportToWordDocument,
-  printPrayerDocument,
-  exportToCSV,
-} from '../utils/prayerExporter';
+import { exportToWordDocument, printPrayerDocument, exportToCSV } from '../utils/prayerExporter';
 import { PrayerFormModal } from '../components/PrayerFormModal';
+import { SeoHead } from '../components/SeoHead';
 
 interface PrayersPageProps {
   isTelugu: boolean;
@@ -99,6 +96,20 @@ export const PrayersPage: React.FC<PrayersPageProps> = ({ isTelugu, searchQuery 
 
   return (
     <main className="flex-grow py-8 md:py-12">
+      <SeoHead
+        title={
+          isTelugu
+            ? 'వేమండ జపమాల మాత ప్రార్థనా విన్నపాల డాష్‌బోర్డ్ | Vemanda Prayers'
+            : 'Vemanda Prayer Petitions Dashboard | Vemanda Japamala Matha Shrine'
+        }
+        description={
+          isTelugu
+            ? 'వేమండ జపమాల మాత క్షేత్ర ప్రార్థనా విన్నపాల డాష్‌బోర్డ్. సంతాన భాగ్యం, గర్భిణీ స్త్రీల క్షేమం, సుఖ ప్రసవం మరియు శారీరక స్వస్థత విన్నపాలు సమర్పించండి & Word పత్రంగా డౌన్‌లోడ్ చేయండి.'
+            : 'Devotee prayer petitions dashboard for Vemanda Japamala Matha Shrine. Special focus on pregnancy, safe delivery, childbirth blessings, and health healing. Export prayers to Word document for Holy Mass.'
+        }
+        canonicalPath="/prayers"
+        keywords="Vemanda, Vemanda Prayers, Vemanda Japamala Matha Petitions, వేమండ, ప్రార్థనలు, Vemanda Village, Pregnancy Prayers, Health Healing"
+      />
       <div className="max-w-7xl mx-auto px-4 md:px-8 space-y-8">
         {/* Top Header & Breadcrumb */}
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-slate-200">
