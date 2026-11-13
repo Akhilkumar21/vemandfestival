@@ -95,6 +95,12 @@ export const PortalFooter: React.FC<PortalFooterProps> = ({ notices, isTelugu })
                 </Link>
               </li>
               <li>
+                <Link to="/prayers" className="hover:text-rose-700 transition-colors flex items-center gap-1.5 font-semibold text-rose-800">
+                  <span className="text-rose-500">•</span>
+                  <span>{isTelugu ? 'ప్రార్థనా విన్నపాల డాష్‌బోర్డ్ (గర్భిణీలు & స్వస్థత)' : 'Prayers Dashboard (Pregnancy & Healing)'}</span>
+                </Link>
+              </li>
+              <li>
                 <Link to="/videos" className="hover:text-red-700 transition-colors flex items-center gap-1.5">
                   <span className="text-red-500">•</span>
                   <span>{isTelugu ? 'ప్రత్యక్ష వీడియోలు (5)' : 'Devotional Videos (5 HD Clips)'}</span>

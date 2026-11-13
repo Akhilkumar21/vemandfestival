@@ -12,6 +12,7 @@ import {
   Menu,
   X,
   Home,
+  Heart,
 } from 'lucide-react';
 
 interface PortalHeaderProps {
@@ -48,6 +49,12 @@ export const PortalHeader: React.FC<PortalHeaderProps> = ({
       labelEn: 'Daily Schedule',
       labelTe: 'కార్యక్రమ పట్టిక',
       icon: Calendar,
+    },
+    {
+      to: '/prayers',
+      labelEn: 'Prayer Petitions',
+      labelTe: 'ప్రార్థనల డాష్‌బోర్డ్',
+      icon: Heart,
     },
     {
       to: '/videos',

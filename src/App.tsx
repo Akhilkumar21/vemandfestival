@@ -7,6 +7,7 @@ import { ScrollToTop } from './components/ScrollToTop';
 import { HomePage } from './pages/HomePage';
 import { FlagsPage } from './pages/FlagsPage';
 import { SchedulePage } from './pages/SchedulePage';
+import { PrayersPage } from './pages/PrayersPage';
 import { VideosPage } from './pages/VideosPage';
 import { GalleryPage } from './pages/GalleryPage';
 import { NoticesPage } from './pages/NoticesPage';
@@ -69,6 +70,15 @@ export const App: React.FC = () => {
               element={
                 <SchedulePage
                   data={festivalData}
+                  isTelugu={isTelugu}
+                  searchQuery={searchQuery}
+                />
+              }
+            />
+            <Route
+              path="/prayers"
+              element={
+                <PrayersPage
                   isTelugu={isTelugu}
                   searchQuery={searchQuery}
                 />

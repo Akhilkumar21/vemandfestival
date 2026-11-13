@@ -15,6 +15,12 @@ import {
   Bell,
   Church,
   ChevronDown,
+  Heart,
+  Baby,
+  Activity,
+  FileText,
+  Flame,
+  PlusCircle,
 } from 'lucide-react';
 
 interface HomePageProps {
@@ -129,6 +135,13 @@ export const HomePage: React.FC<HomePageProps> = ({ data, isTelugu, searchQuery 
                   {isTelugu ? 'కార్యక్రమ వివరాలు' : 'Daily Schedule'}
                 </Link>
                 <Link
+                  to="/prayers"
+                  className="px-5 py-2.5 rounded-full bg-gradient-to-r from-rose-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-bold text-xs md:text-sm shadow-md transition-all flex items-center gap-1.5 active:scale-95"
+                >
+                  <Heart className="w-4 h-4 fill-white" />
+                  <span>{isTelugu ? 'ప్రార్థనా విన్నపాలు' : 'Prayer Petitions'}</span>
+                </Link>
+                <Link
                   to="/videos"
                   className="px-5 py-2.5 rounded-full bg-white border border-slate-300 hover:border-red-500 text-slate-800 font-bold text-xs md:text-sm shadow-sm transition-all flex items-center gap-1.5 active:scale-95"
                 >
@@ -226,6 +239,47 @@ export const HomePage: React.FC<HomePageProps> = ({ data, isTelugu, searchQuery 
 
       {/* Main Content Sections with Links to Dedicated Pages */}
       <div className="max-w-7xl mx-auto px-4 md:px-8 space-y-16 py-10">
+        {/* Featured Section: Devotee Prayer Petitions Dashboard & Highlights */}
+        <section className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-amber-500/10 via-rose-500/10 to-emerald-500/10 border-2 border-amber-300/80 p-6 md:p-8 shadow-sm">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+            <div className="space-y-3 text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-amber-300 text-amber-900 text-xs font-bold shadow-xs">
+                <Heart className="w-3.5 h-3.5 fill-rose-500 text-rose-500" />
+                <span>
+                  {isTelugu
+                    ? 'మరియమాత సన్నిధిలో ప్రార్థనా విన్నపాలు'
+                    : 'Prayer Petitions to Mother Mary'}
+                </span>
+                <span className="text-amber-400">•</span>
+                <span className="text-rose-700 font-extrabold">
+                  {isTelugu ? 'గర్భిణీలు & స్వస్థత విభాగం' : 'Pregnancy & Health Focus'}
+                </span>
+              </div>
+              <h2 className="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight">
+                {isTelugu
+                  ? 'సంతాన భాగ్యం, సుఖ ప్రసవం & రోగ నివారణ స్వస్థత ప్రార్థనలు'
+                  : 'Special Blessings for Pregnancy, Childbirth & Divine Healing'}
+              </h2>
+              <p className="text-xs md:text-sm text-slate-600 max-w-2xl leading-relaxed">
+                {isTelugu
+                  ? 'మీ కుటుంబంలో ఎవరైనా గర్భిణీగా ఉన్నారా లేదా అనారోగ్యంతో బాధపడుతున్నారా? మీ విన్నపాలు పంపండి. ఇవి పవిత్ర దివ్యబలిపూజలో మరియు రథోత్సవంలో సమర్పించబడతాయి మరియు Word డాక్యుమెంట్‌గా డౌన్‌లోడ్ చేయవచ్చు.'
+                  : 'Submit your prayer intentions for expectant mothers, childbirth blessings, and health recovery. View all devotee prayers on the live dashboard and export as printable Word documents.'}
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
+              <Link
+                to="/prayers"
+                className="px-6 py-3 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold text-xs md:text-sm shadow-md transition-all flex items-center gap-2 active:scale-95"
+              >
+                <Heart className="w-4 h-4 fill-white" />
+                <span>{isTelugu ? 'ప్రార్థన డాష్‌బోర్డ్ తెరవండి' : 'Open Prayer Dashboard'}</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Section 1: The 4 Sacred Flags */}
         <section id="flags" className="relative">
           <div className="flex items-center justify-between mb-4">
