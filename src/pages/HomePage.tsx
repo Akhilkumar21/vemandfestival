@@ -359,3 +359,4 @@ export const HomePage: React.FC<HomePageProps> = ({ data, isTelugu, searchQuery 
     </main>
   );
 };
+

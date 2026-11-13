@@ -75,3 +75,4 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ data, isTelugu, search
     </div>
   );
 };
+

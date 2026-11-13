@@ -80,3 +80,4 @@ export const SchedulePage: React.FC<SchedulePageProps> = ({ data, isTelugu, sear
     </div>
   );
 };
+

@@ -75,3 +75,4 @@ export const FlagsPage: React.FC<FlagsPageProps> = ({ data, isTelugu, searchQuer
     </div>
   );
 };
+

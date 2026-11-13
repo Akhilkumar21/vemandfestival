@@ -286,3 +286,4 @@ export const NoticesPage: React.FC<NoticesPageProps> = ({ data, isTelugu, search
     </div>
   );
 };
+
