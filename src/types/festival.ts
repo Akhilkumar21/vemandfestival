@@ -68,6 +68,11 @@ export interface NoticeItem {
 export interface FestivalData {
   village: string;
   villageTelugu: string;
+  mandal?: string;
+  mandalTelugu?: string;
+  district?: string;
+  districtTelugu?: string;
+  pincode?: string;
   parish: string;
   parishTelugu: string;
   shrine: string;

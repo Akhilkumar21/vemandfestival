@@ -73,16 +73,16 @@ export const HomePage: React.FC<HomePageProps> = ({ data, isTelugu, searchQuery 
       <SeoHead
         title={
           isTelugu
-            ? 'వేమండ - వేమండ జపమాల మహోత్సవాలు | Vemanda Festival & Japamala Matha Shrine'
-            : 'Vemanda - Vemanda Japamala Matha Annual Feast | Vemanda Festival Portal'
+            ? 'వేమండ (Vemanda) - గ్రామ అధికారిక సమాచారం & జపమాల మహోత్సవాలు | Unguturu, PIN 521311'
+            : 'Vemanda (వేమండ) - Official Village, Unguturu Mandal & Festival Portal | PIN 521311'
         }
         description={
           isTelugu
-            ? 'వేమండ జపమాల మాత క్షేత్ర వార్షిక మహోత్సవాలు (అక్టోబర్ 27-30). కృష్ణా జిల్లా, వెంట్రప్రగడ విచారణ వేమండ గ్రామ పవిత్ర పతాక ఆవిష్కరణలు, దివ్యబలిపూజలు, ప్రార్థనల డాష్‌బోర్డ్, మరియు మహా రథోత్సవ సమాచారం.'
-            : 'Official celebration portal for Vemanda Festival (వేమండ జపమాల మహోత్సవాలు) at Vemanda Japamala Matha Shrine in Vemanda Village, Ventrapragada Parish. Complete schedule for October 27-30, 4 sacred flags, mass timings, prayer request dashboard, and chariot procession.'
+            ? 'వేమండ (Vemanda) గ్రామం, ఉంగుటూరు మండలం, కృష్ణా జిల్లా, ఆంధ్రప్రదేశ్ (పిన్ కోడ్: 521311). ప్రసిద్ధ వేమండ జపమాల మాత క్షేత్ర వార్షిక మహోత్సవాలు (అక్టోబర్ 27-30), 4 పతాక ఆవిష్కరణలు, పూజలు, ప్రార్థనలు & రథోత్సవ సమగ్ర సమాచారం.'
+            : 'Official portal for Vemanda (వేమండ) Village in Unguturu Mandal, Krishna District, Andhra Pradesh (PIN 521311), Ventrapragada Parish. Home of Vemanda Japamala Matha Shrine, Annual Festival (Oct 27-30), 4 sacred flags, mass schedule, prayer dashboard, and chariot procession.'
         }
         canonicalPath="/"
-        keywords="Vemanda, Vemanda Festival, Vemanda Japamala Matha, Vemanda Annual Festival, Vemanda Mahotsavalu, Vemanda Village, వేమండ, వేమండ జపమాల మహోత్సవాలు, Ventrapragada, Krishna District, Flag Hoisting, Rathotsavam, Theru Pradakshina, Catholic Feast"
+        keywords="Vemanda, వేమండ, Vemanda Village, Vemanda Unguturu, Vemanda Krishna District, Vemanda 521311, Unguturu Mandal, Ventrapragada, Indupalli, Vemanda Festival, Vemanda Japamala Matha, Vemanda Mahotsavalu"
       />
 
       {/* Majestic Hero Banner */}
@@ -281,6 +281,47 @@ export const HomePage: React.FC<HomePageProps> = ({ data, isTelugu, searchQuery 
                 ? 'ఆంధ్రప్రదేశ్ రాష్ట్రం, కృష్ణా జిల్లాలోని పవిత్ర పుణ్యక్షేత్రం వేమండ. వెంట్రప్రగడ విచారణ పరిధిలోని ఈ దివ్య గ్రామంలో ప్రతి సంవత్సరం అక్టోబర్ 27 నుండి 30 వరకు జపమాల మాత వార్షిక మహోత్సవాలు అత్యంత భక్తి ప్రపత్తులతో నిర్వహించబడతాయి.'
                 : 'Vemanda is a renowned pilgrim village located in Ventrapragada Parish, Krishna District, Andhra Pradesh. Every year from October 27 to October 30, the sacred Annual Feast of Japamala Matha (Our Lady of the Rosary) is celebrated with solemn Catholic traditions and community devotion.'}
             </p>
+          </div>
+
+          {/* Google Knowledge Panel Style Key Details Card for Vemanda Village */}
+          <div className="p-6 rounded-2xl bg-amber-50/50 border border-amber-200 shadow-xs">
+            <div className="flex items-center gap-2 mb-3">
+              <MapPin className="w-5 h-5 text-amber-700" />
+              <h3 className="text-sm sm:text-base font-bold text-slate-900">
+                {isTelugu ? 'వేమండ గ్రామ భౌగోళిక వివరాలు (Vemanda Village Key Details)' : 'Vemanda Village Key Details & Geography'}
+              </h3>
+            </div>
+            <p className="text-xs text-slate-700 mb-4 leading-relaxed">
+              {isTelugu
+                ? 'వేమండ (Vemanda) ఆంధ్రప్రదేశ్ రాష్ట్రం, కృష్ణా జిల్లాలోని ఉంగుటూరు మండలంలో ఉన్న ప్రసిద్ధ గ్రామం (పిన్ కోడ్: 521311). చారిత్రక వెంట్రప్రగడ ఆర్.సి.యం. విచారణ పరిధిలోని ఈ గ్రామం ప్రముఖ జపమాల మాత పుణ్యక్షేత్రం మరియు అక్టోబర్ 27-30 వార్షిక మహోత్సవాలకు కేంద్ర బిందువు.'
+                : 'Vemanda is a prominent village in Unguturu Mandal of Krishna District in Andhra Pradesh, India (PIN Code: 521311). Located under the historical Ventrapragada Parish, Vemanda is globally renowned for the sacred Japamala Matha Shrine and its Annual Feast celebrated every October 27 to 30.'}
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 text-xs">
+              <div className="bg-white p-3 rounded-xl border border-slate-200 shadow-2xs">
+                <span className="text-[10px] text-slate-400 font-bold uppercase block">{isTelugu ? 'గ్రామం' : 'Village'}</span>
+                <span className="font-bold text-slate-900 text-xs sm:text-sm">Vemanda (వేమండ)</span>
+              </div>
+              <div className="bg-white p-3 rounded-xl border border-slate-200 shadow-2xs">
+                <span className="text-[10px] text-slate-400 font-bold uppercase block">{isTelugu ? 'మండలం' : 'Mandal'}</span>
+                <span className="font-bold text-slate-900 text-xs sm:text-sm">Unguturu (ఉంగుటూరు)</span>
+              </div>
+              <div className="bg-white p-3 rounded-xl border border-slate-200 shadow-2xs">
+                <span className="text-[10px] text-slate-400 font-bold uppercase block">{isTelugu ? 'జిల్లా & రాష్ట్రం' : 'District'}</span>
+                <span className="font-bold text-slate-900 text-xs sm:text-sm">Krishna, AP</span>
+              </div>
+              <div className="bg-white p-3 rounded-xl border border-slate-200 shadow-2xs">
+                <span className="text-[10px] text-slate-400 font-bold uppercase block">{isTelugu ? 'పిన్ కోడ్' : 'Postal Code'}</span>
+                <span className="font-bold text-amber-700 text-xs sm:text-sm">521311</span>
+              </div>
+              <div className="bg-white p-3 rounded-xl border border-slate-200 shadow-2xs">
+                <span className="text-[10px] text-slate-400 font-bold uppercase block">{isTelugu ? 'విచారణ' : 'Parish'}</span>
+                <span className="font-bold text-blue-700 text-xs sm:text-sm">Ventrapragada</span>
+              </div>
+              <div className="bg-white p-3 rounded-xl border border-slate-200 shadow-2xs">
+                <span className="text-[10px] text-slate-400 font-bold uppercase block">{isTelugu ? 'ప్రధాన పండుగ' : 'Major Feast'}</span>
+                <span className="font-bold text-rose-700 text-xs sm:text-sm">Oct 27 - 30</span>
+              </div>
+            </div>
           </div>
 
           {/* 3 Pillar Cards: Vemanda Village, Japamala Matha Shrine, Sacred Festival Traditions */}

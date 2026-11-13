@@ -3,6 +3,11 @@ import { FestivalData } from '../types/festival';
 export const festivalData: FestivalData = {
   village: "Vemanda",
   villageTelugu: "వేమండ",
+  mandal: "Unguturu",
+  mandalTelugu: "ఉంగుటూరు",
+  district: "Krishna",
+  districtTelugu: "కృష్ణా",
+  pincode: "521311",
   parish: "Ventrapragada",
   parishTelugu: "వెంట్రప్రగడ",
   shrine: "Japamala Matha Griha Prathishta",
