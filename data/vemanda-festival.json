@@ -1,0 +1,514 @@
+{
+  "village": "Vemanda",
+  "villageTelugu": "వేమండ",
+  "parish": "Ventrapragada",
+  "parishTelugu": "వెంట్రప్రగడ",
+  "shrine": "Japamala Matha Griha Prathishta",
+  "shrineTelugu": "జపమాల మాత గృహ ప్రతిష్ట",
+  "edition": "Annual Feast",
+  "editionTelugu": "వార్షిక మహోత్సవములు",
+  "scripture": "\"All generations will call me blessed\" (Luke 1:48)",
+  "scriptureTelugu": "\"తరతరముల వారు నన్ను ధన్యురాలని పిలిచెదరు\" (లూకా 1:48)",
+  "dates": {
+    "start": "10-27",
+    "end": "10-30",
+    "display": "October 27, 28, 29, 30",
+    "displayTelugu": "అక్టోబర్ 27, 28, 29, 30"
+  },
+  "flags": [
+    {
+      "id": 1,
+      "flagNumber": "1st Sacred Flag",
+      "flagNumberTelugu": "మొదటి పతాకము",
+      "date": "10-27",
+      "dateDisplay": "October 27",
+      "dateDisplayTelugu": "ది.27-10 తేదీ",
+      "time": "6:00 PM",
+      "timeTelugu": "సా॥ 6.00 గం||లకు",
+      "event": "Stupa Dedication & 1st Flag Hoisting Ceremony",
+      "eventTelugu": "స్థూప ప్రతిష్ఠ & మొదటి పతాక ఆవిష్కరణ",
+      "description": "Inauguration of the Annual Feast with the sacred blessing and dedication of the Stupa / Dwajasthambam, followed by the hoisting of the First Holy Flag and solemn Divya Bali Pooja.",
+      "descriptionTelugu": "వార్షిక మహోత్సవాల ప్రారంభం సందర్భంగా పవిత్ర స్థూప ప్రతిష్ఠ, మొదటి పతాక ఆవిష్కరణ మరియు దివ్యబలిపూజ ఘనంగా నిర్వహించబడును.",
+      "choir": "Vemanda Choir Team",
+      "choirTelugu": "వేమండ గాయక బృందం",
+      "icon": "flag"
+    },
+    {
+      "id": 2,
+      "flagNumber": "2nd Sacred Flag",
+      "flagNumberTelugu": "రెండవ పతాకము",
+      "date": "10-28",
+      "dateDisplay": "October 28",
+      "dateDisplayTelugu": "ది.28-10 తేదీ",
+      "time": "9:00 AM",
+      "timeTelugu": "ఉ॥ 9.00 గం||లకు",
+      "event": "2nd Flag Hoisting & Holy Adoration",
+      "eventTelugu": "రెండవ పతాక ఆవిష్కరణ & ఆరాధన",
+      "description": "Morning hoisting of the Second Sacred Flag followed by Eucharistic adoration, meditation on the Word of God, and evening Holy Mass with fellowship community dinner.",
+      "descriptionTelugu": "ఉదయం రెండవ పతాక ఆవిష్కరణ, పవిత్ర దివ్యసత్ప్రసాద ఆరాధన, వాక్యధ్యానము, ప్రార్థనలు మరియు సాయంత్రం దివ్యబలిపూజ, రాత్రి ప్రీతి విందు.",
+      "choir": "Vemanda Choir Team",
+      "choirTelugu": "వేమండ గాయక బృందం",
+      "icon": "flag"
+    },
+    {
+      "id": 3,
+      "flagNumber": "3rd Sacred Flag",
+      "flagNumberTelugu": "మూడవ పతాకము",
+      "date": "10-29",
+      "dateDisplay": "October 29",
+      "dateDisplayTelugu": "ది.29-10 తేదీ",
+      "time": "9:00 AM",
+      "timeTelugu": "ఉ॥ 9.00 గం||లకు",
+      "event": "3rd Flag Hoisting & Divya Bali Pooja",
+      "eventTelugu": "మూడవ పతాక ఆవిష్కరణ & దివ్యబలిపూజ",
+      "description": "Hoisting of the Third Holy Flag along with Holy Mass, devotional adoration, reflection on Scriptures, and evening Eucharistic celebration followed by community dinner.",
+      "descriptionTelugu": "ఉదయం మూడవ పతాక ఆవిష్కరణ, దివ్యబలిపూజ, ఆరాధన, వాక్యధ్యానము, ప్రార్థనలు, సాయంత్రం దివ్యబలిపూజ మరియు రాత్రి 9 గంటలకు విందు.",
+      "choir": "Vemanda Choir Team",
+      "choirTelugu": "వేమండ గాయక బృందం",
+      "icon": "flag"
+    },
+    {
+      "id": 4,
+      "flagNumber": "4th Sacred Flag",
+      "flagNumberTelugu": "నాల్గవ పతాకము",
+      "date": "10-30",
+      "dateDisplay": "October 30",
+      "dateDisplayTelugu": "ది.30-10 తేదీ",
+      "time": "9:00 AM",
+      "timeTelugu": "ఉ॥ 9.00 గం||లకు",
+      "event": "4th Grand Flag Hoisting & Solemn Concelebrated High Mass",
+      "eventTelugu": "నాల్గవ పతాక ఆవిష్కరణ & సమిష్టి దివ్యబలిపూజ",
+      "description": "Culminating day of the feast: Holy Rosary at 8:30 AM, Hoisting of the Fourth Holy Flag, Grand Concelebrated Mass, festive lunch at noon, and majestic Chariot (Theru) Procession in the evening.",
+      "descriptionTelugu": "మహోత్సవ ముగింపు వేడుక: ఉదయం జపమాల, నాల్గవ పతాక ఆవిష్కరణ, ఘన సమిష్టి దివ్యబలిపూజ, మధ్యాహ్నం మహా విందు, సాయంత్రం వేమండ వీధులలో వైభవ తేరు ప్రదక్షిణ - రథోత్సవం.",
+      "choir": "Vemanda Choir Team",
+      "choirTelugu": "వేమండ గాయక బృందం",
+      "icon": "flag"
+    }
+  ],
+  "dailyTradition": {
+    "time": "8:00 AM Daily",
+    "timeTelugu": "ప్రతిరోజు ఉదయం 8.00 గం||లకు",
+    "title": "Sacred Flag Procession from R.C.M. Church",
+    "titleTelugu": "ఆర్.సి.యం. దేవాలయం నుండి మరిమాత పతాక ఊరేగింపు",
+    "description": "Every morning at 8:00 AM, Mother Mary's sacred flag is carried in a vibrant ceremonial procession accompanied by traditional musical instruments (Melathalalu) from the R.C.M. Church to the Japamala Matha Shrine.",
+    "descriptionTelugu": "ప్రతిరోజు ఉదయం 8.00 గంటలకు ఆర్.సి.యం. దేవాలయం నుండి మరిమాత పతాకము, మేళ తాళాలతో భక్తిశ్రద్ధలతో జపమాల మాత గృహ వద్దకు చేరును."
+  },
+  "schedule": [
+    {
+      "date": "10-27",
+      "dayTitle": "Day 1 - Inauguration & Stupa Blessing",
+      "dayTitleTelugu": "మొదటి రోజు - ప్రారంభ వేడుక & స్థూప ప్రతిష్ఠ",
+      "events": [
+        {
+          "time": "8:00 AM",
+          "timeTelugu": "ఉ॥ 8.00 గం||",
+          "category": "Tradition",
+          "categoryTelugu": "పతాక యాత్ర",
+          "title": "Flag Procession from R.C.M. Church",
+          "titleTelugu": "ఆర్.సి.యం. దేవాలయం నుండి పతాక మేళ తాళాల ఊరేగింపు",
+          "description": "Ceremonial flag procession accompanied by traditional melody instruments from R.C.M. Church to the Japamala Matha Shrine.",
+          "descriptionTelugu": "ఆర్.సి.యం. దేవాలయం నుండి మేళ తాళాలతో మరిమాత పతాకం జపమాల మాత క్షేత్రానికి చేరును."
+        },
+        {
+          "time": "6:00 PM",
+          "timeTelugu": "సా॥ 6.00 గం||",
+          "category": "Flag Hoisting",
+          "categoryTelugu": "పతాక ఆవిష్కరణ",
+          "title": "Stupa Dedication, 1st Flag Hoisting & Divya Bali Pooja",
+          "titleTelugu": "స్థూప ప్రతిష్ఠ, మొదటి పతాక ఆవిష్కరణ, దివ్యబలిపూజ",
+          "description": "Blessing and dedication of the sacred Stupa / Dhwajastambha, official hoisting of the First Holy Flag, and solemn Eucharistic celebration.",
+          "descriptionTelugu": "స్థూప ప్రతిష్ఠ, మొదటి పతాక ఆవిష్కరణ మరియు భక్తి ప్రపత్తులతో దివ్యబలిపూజ."
+        },
+        {
+          "time": "7:30 PM",
+          "timeTelugu": "రాత్రి",
+          "category": "Choir",
+          "categoryTelugu": "గాయక బృందం",
+          "title": "Devotional Hymns by Vemanda Choir Team",
+          "titleTelugu": "వేమండ గాయక బృందం చేత భక్తి గీతాలాపన",
+          "description": "Inspiring spiritual hymns and praise sung by the Vemanda Choir.",
+          "descriptionTelugu": "వేమండ గాయక బృందం చేత వీనులవిందైన మరియమాత భక్తి సంకీర్తనలు."
+        }
+      ]
+    },
+    {
+      "date": "10-28",
+      "dayTitle": "Day 2 - Adoration & Spiritual Meditation",
+      "dayTitleTelugu": "రెండవ రోజు - ఆరాధన & వాక్యధ్యానము",
+      "events": [
+        {
+          "time": "8:00 AM",
+          "timeTelugu": "ఉ॥ 8.00 గం||",
+          "category": "Tradition",
+          "categoryTelugu": "పతాక యాత్ర",
+          "title": "Morning Flag Procession with Melathalalu",
+          "titleTelugu": "ఉదయపు పతాక ఊరేగింపు - మేళ తాళాలు",
+          "description": "Mother Mary's flag departs from R.C.M. Church towards Japamala Matha Grotto.",
+          "descriptionTelugu": "ఆర్.సి.యం. దేవాలయం నుండి మేళ తాళాలతో పతాక ఊరేగింపు."
+        },
+        {
+          "time": "9:00 AM",
+          "timeTelugu": "ఉ॥ 9.00 గం||",
+          "category": "Flag Hoisting",
+          "categoryTelugu": "పతాక ఆవిష్కరణ",
+          "title": "2nd Sacred Flag Hoisting Ceremony",
+          "titleTelugu": "రెండవ పతాక ఆవిష్కరణ మహోత్సవం",
+          "description": "Solemn hoisting of the Second Sacred Flag upon the illuminated festival mast.",
+          "descriptionTelugu": "రెండవ పతాక ఆవిష్కరణ కార్యక్రమము."
+        },
+        {
+          "time": "10:00 AM",
+          "timeTelugu": "ఉ॥ 10.00 గం||",
+          "category": "Adoration",
+          "categoryTelugu": "ఆరాధన",
+          "title": "Holy Eucharistic Adoration, Word Meditation & Prayers",
+          "titleTelugu": "దివ్యసత్ప్రసాద ఆరాధన, వాక్యధ్యానము, ప్రత్యేక ప్రార్థనలు",
+          "description": "Deep communal prayer, adoration of the Blessed Sacrament, and meditation on Holy Scripture.",
+          "descriptionTelugu": "దివ్యసత్ప్రసాద ఆరాధన, దైవ వాక్య ధ్యానము మరియు విశ్వాసుల ప్రత్యేక ప్రార్థనలు."
+        },
+        {
+          "time": "6:00 PM",
+          "timeTelugu": "సా॥ 6.00 గం||",
+          "category": "Mass",
+          "categoryTelugu": "దివ్యబలిపూజ",
+          "title": "Evening Adoration, Word Meditation & Holy Mass",
+          "titleTelugu": "సాయంకాల ఆరాధన, వాక్యధ్యానము, ప్రార్థనలు మరియు దివ్యబలిపూజ",
+          "description": "Spiritual evening worship service and Holy Mass for intentions of families and devotees.",
+          "descriptionTelugu": "సాయంకాల ఆరాధన, వాక్యధ్యానము, భక్తి ప్రార్థనలు మరియు పవిత్ర దివ్యబలిపూజ."
+        },
+        {
+          "time": "9:00 PM",
+          "timeTelugu": "రా॥ 9.00 గం||",
+          "category": "Community Feast",
+          "categoryTelugu": "ప్రీతి విందు",
+          "title": "Community Fellowship Dinner (Vindu)",
+          "titleTelugu": "భక్తులకు ప్రీతి విందు భోజన సదుపాయం",
+          "description": "Shared evening fellowship dinner for all visiting pilgrims and villagers.",
+          "descriptionTelugu": "క్షేత్రానికి విచ్చేసిన భక్తులకు, గ్రామ ప్రజలకు రాత్రి ప్రీతి విందు."
+        }
+      ]
+    },
+    {
+      "date": "10-29",
+      "dayTitle": "Day 3 - Holy Mass & Eucharistic Grace",
+      "dayTitleTelugu": "మూడవ రోజు - దివ్యబలిపూజ & కృపా దీవెనలు",
+      "events": [
+        {
+          "time": "8:00 AM",
+          "timeTelugu": "ఉ॥ 8.00 గం||",
+          "category": "Tradition",
+          "categoryTelugu": "పతాక యాత్ర",
+          "title": "Morning Flag Procession with Melathalalu",
+          "titleTelugu": "ఆర్.సి.యం. నుండి పతాక ఊరేగింపు",
+          "description": "Daily ceremonial procession bringing Mother Mary's flag with instruments to the shrine.",
+          "descriptionTelugu": "మేళ తాళాల నడుమ ఆర్.సి.యం. నుండి జపమాల మాత గృహానికి పతాక యాత్ర."
+        },
+        {
+          "time": "9:00 AM",
+          "timeTelugu": "ఉ॥ 9.00 గం||",
+          "category": "Flag Hoisting",
+          "categoryTelugu": "పతాక ఆవిష్కరణ",
+          "title": "3rd Sacred Flag Hoisting & Divya Bali Pooja",
+          "titleTelugu": "మూడవ పతాక ఆవిష్కరణ & దివ్యబలిపూజ",
+          "description": "Ceremonial unfurling of the Third Holy Flag and Holy Eucharistic Mass.",
+          "descriptionTelugu": "మూడవ పతాక ఆవిష్కరణ మరియు పవిత్ర దివ్యబలిపూజ."
+        },
+        {
+          "time": "10:00 AM",
+          "timeTelugu": "ఉ॥ 10.00 గం||",
+          "category": "Adoration",
+          "categoryTelugu": "ఆరాధన",
+          "title": "Eucharistic Adoration & Scripture Meditation",
+          "titleTelugu": "దివ్యసత్ప్రసాద ఆరాధన, వాక్యధ్యానము, ప్రార్థనలు",
+          "description": "Praise, adoration, reflection upon the Gospel, and personal blessing prayers.",
+          "descriptionTelugu": "ఆరాధన, వాక్యధ్యానము మరియు దైవ కృపకై ప్రార్థనలు."
+        },
+        {
+          "time": "6:00 PM",
+          "timeTelugu": "సా॥ 6.00 గం||",
+          "category": "Mass",
+          "categoryTelugu": "దివ్యబలిపూజ",
+          "title": "Evening Adoration, Word Meditation & Holy Mass",
+          "titleTelugu": "సాయంత్రం ఆరాధన, వాక్యధ్యానము, ప్రార్థనలు & దివ్యబలిపూజ",
+          "description": "Solemn evening gathering of faithful for adoration and Holy Eucharistic celebration.",
+          "descriptionTelugu": "సాయంకాల దివ్యసత్ప్రసాద ఆరాధన, వాక్యధ్యానము మరియు దివ్యబలిపూజ సమర్పణ."
+        },
+        {
+          "time": "9:00 PM",
+          "timeTelugu": "రా॥ 9.00 గం||",
+          "category": "Community Feast",
+          "categoryTelugu": "ప్రీతి విందు",
+          "title": "Community Fellowship Dinner (Vindu)",
+          "titleTelugu": "రాత్రి విందు భోజనం",
+          "description": "Generous fellowship dinner served to all devotees and attendees.",
+          "descriptionTelugu": "యాత్రికులకు మరియు భక్తులకు రాత్రి 9 గంటలకు ప్రీతి విందు."
+        }
+      ]
+    },
+    {
+      "date": "10-30",
+      "dayTitle": "Day 4 - Grand Feast Day & Chariot Procession",
+      "dayTitleTelugu": "నాల్గవ రోజు - మహోత్సవ ప్రధాన దినం & రథోత్సవం",
+      "events": [
+        {
+          "time": "8:00 AM",
+          "timeTelugu": "ఉ॥ 8.00 గం||",
+          "category": "Tradition",
+          "categoryTelugu": "పతాక యాత్ర",
+          "title": "Solemn Flag Procession from R.C.M. Church",
+          "titleTelugu": "మహోత్సవ పతాక ఊరేగింపు - మేళ తాళాలు",
+          "description": "The finale morning procession of the sacred flag from R.C.M. Church to the shrine.",
+          "descriptionTelugu": "ఆర్.సి.యం. దేవాలయం నుండి జపమాల మాత గృహానికి తుది పతాక యాత్ర."
+        },
+        {
+          "time": "8:30 AM",
+          "timeTelugu": "ఉ॥ 8.30 గం||",
+          "category": "Rosary",
+          "categoryTelugu": "జపమాల ప్రార్థన",
+          "title": "Holy Rosary Prayer (Japamala)",
+          "titleTelugu": "జపమాల ప్రార్థన",
+          "description": "Devout communal recitation of the Holy Rosary seeking Mother Mary's intercession.",
+          "descriptionTelugu": "భక్తులందరి సమక్షంలో భక్తిశ్రద్ధలతో పవిత్ర జపమాల ప్రార్థన."
+        },
+        {
+          "time": "9:00 AM",
+          "timeTelugu": "ఉ॥ 9.00 గం||",
+          "category": "Flag Hoisting",
+          "categoryTelugu": "పతాక ఆవిష్కరణ",
+          "title": "4th Sacred Flag Hoisting & Concelebrated High Mass",
+          "titleTelugu": "నాల్గవ పతాక ఆవిష్కరణ & సమిష్టి దివ్యబలిపూజ",
+          "description": "Climactic unfurling of the Fourth Sacred Flag followed by Solemn Concelebrated High Mass.",
+          "descriptionTelugu": "నాల్గవ పతాక ఆవిష్కరణ మరియు మహా వైభవంగా సమిష్టి దివ్యబలిపూజ."
+        },
+        {
+          "time": "10:30 AM",
+          "timeTelugu": "ఉదయం",
+          "category": "Choir",
+          "categoryTelugu": "గాయక బృందం",
+          "title": "Solemn Choral Praise by Vemanda Choir Team",
+          "titleTelugu": "వేమండ గాయక బృందం చేత పవిత్ర గీతాలాపన",
+          "description": "Beautiful celebration hymns by the Vemanda Choir Team during the High Mass.",
+          "descriptionTelugu": "వేమండ గాయక బృందం సమర్పించిన దివ్య గానామృతం."
+        },
+        {
+          "time": "12:00 PM",
+          "timeTelugu": "మధ్యాహ్నం 12.00 గం||",
+          "category": "Community Feast",
+          "categoryTelugu": "మహా విందు",
+          "title": "Grand Feast Day Community Banquet (Maha Vindu)",
+          "titleTelugu": "మధ్యాహ్నం మహా విందు భోజన మహోత్సవం",
+          "description": "Grand celebratory feast and lunch served to thousands of visiting pilgrims.",
+          "descriptionTelugu": "విచ్చేసిన వేలాది భక్తులకు మధ్యాహ్నం 12:00 గంటలకు రుచికరమైన మహా అన్నదాన విందు."
+        },
+        {
+          "time": "4:00 PM",
+          "timeTelugu": "సా॥ 4.00 గం||",
+          "category": "Grand Procession",
+          "categoryTelugu": "రథోత్సవం / తేరు ప్రదక్షిణ",
+          "title": "Grand Chariot & Saints' Palanquin Procession through Vemanda Streets",
+          "titleTelugu": "మరియమాత మరియు పునీతుల స్వరూపాలతో గొప్ప తేరు ప్రదక్షిణ - రథోత్సవం",
+          "description": "Spectacular grand chariot (Theru) procession carrying the venerated statues of Mother Mary, St. Michael the Archangel, and Saint statues across all main streets of Vemanda village with fireworks, flower rains, and devout chanting.",
+          "descriptionTelugu": "మరియమాత మరియు పలువురు పునీతుల స్వరూపాలతో వేమండ గ్రామ పురవీధులలో కన్నులపండువగా తేరు ప్రదక్షిణ - రథోత్సవం."
+        }
+      ]
+    }
+  ],
+  "notices": [
+    {
+      "id": 1,
+      "text": "Devotees wishing to sponsor Holy Mass intentions or offer donations may register at the designated counters.",
+      "textTelugu": "పూజ పెట్టించుకోదలచిన వారు, విరాళములు ఇచ్చు వారు ఏర్పాటు చేయబడిన కౌంటర్లలో నమోదు చేయించుకోగలరు."
+    },
+    {
+      "id": 2,
+      "text": "All pilgrims and visitors are kindly requested to maintain sacred decorum, peace, and discipline throughout the feast.",
+      "textTelugu": "పండుగల సమయంలో భక్తి మర్యాదలు, శాంతి మరియు క్రమశిక్షణ పాటించవలయును."
+    },
+    {
+      "id": 3,
+      "text": "For festival arrangements and inquiries, please contact the festival coordinating committee.",
+      "textTelugu": "పండుగ ఏర్పాట్లు మరియు ఇతర వివరములకు నిర్వాహక కమిటీని సంప్రదించగలరు."
+    }
+  ],
+  "videos": [
+    {
+      "id": "vid-1",
+      "filename": "video-01-flag-mast-hoisting.mp4",
+      "path": "assets/videos/video-01-flag-mast-hoisting.mp4",
+      "title": "Sacred Flag Hoisting & Dwajasthambam Lighting",
+      "titleTelugu": "పతాక ఆవిష్కరణ & విద్యుత్ దీపాలంకరణ",
+      "duration": "0:28",
+      "category": "Flag Ceremony",
+      "categoryTelugu": "పతాక మహోత్సవం",
+      "description": "Electrifying moments of hoisting the sacred flag atop the towering illuminated mast amidst crowd cheers and prayers.",
+      "descriptionTelugu": "వేలాది భక్తుల సమక్షంలో విద్యుద్దీప కాంతుల నడుమ గగనతలాన రెపరెపలాడిన మరిమాత పవిత్ర పతాక ఆవిష్కరణ."
+    },
+    {
+      "id": "vid-2",
+      "filename": "video-02-grand-annual-feast-highlights.mp4",
+      "path": "assets/videos/video-02-grand-annual-feast-highlights.mp4",
+      "title": "Annual Feast Grand Celebrations & Crowds",
+      "titleTelugu": "వార్షిక మహోత్సవాల సంపూర్ణ విశేషాలు",
+      "duration": "1:20",
+      "category": "Feast Highlights",
+      "categoryTelugu": "మహోత్సవ విశేషాలు",
+      "description": "Comprehensive highlight reel covering the majestic shrine tower, divine liturgies, vibrant music, and ocean of devotees.",
+      "descriptionTelugu": "మహోన్నత క్షేత్ర వైభవం, భక్తి ప్రపత్తులు, రంగురంగుల విద్యుత్ దీపాలు మరియు భక్తుల జనసందోహం."
+    },
+    {
+      "id": "vid-3",
+      "filename": "video-03-sacred-statue-adoration.mp4",
+      "path": "assets/videos/video-03-sacred-statue-adoration.mp4",
+      "title": "Sacred Statue Adoration & Devotional Prayers",
+      "titleTelugu": "మరియమాత స్వరూప ఆరాధన & భక్తి పూజలు",
+      "duration": "0:18",
+      "category": "Adoration",
+      "categoryTelugu": "ఆరాధన",
+      "description": "Close devotional view of the venerated Mother Mary and Infant Jesus adorned with fragrant floral garlands.",
+      "descriptionTelugu": "పూలమాలలతో శోభిల్లే జపమాల మాత మరియు బాలయేసుల దర్శనం, భక్తుల భక్తి ప్రార్థనలు."
+    },
+    {
+      "id": "vid-4",
+      "filename": "video-04-devotional-chariot-procession.mp4",
+      "path": "assets/videos/video-04-devotional-chariot-procession.mp4",
+      "title": "Devotional Village Procession with Sacred Statues",
+      "titleTelugu": "పునీతుల స్వరూపాల పవిత్ర వీధి ఊరేగింపు",
+      "duration": "0:31",
+      "category": "Procession",
+      "categoryTelugu": "తేరు ప్రదక్షిణ",
+      "description": "Devout procession moving through the village with decorated palanquins, St. Michael the Archangel, and celebratory umbrellas.",
+      "descriptionTelugu": "పునీత మిఖాయేలు మరియు పునీతుల స్వరూపాలతో మేళతాళాల నడుమ సాగిన పవిత్ర గ్రామ ఊరేగింపు దృశ్యం."
+    },
+    {
+      "id": "vid-5",
+      "filename": "video-05-illuminated-night-celebration.mp4",
+      "path": "assets/videos/video-05-illuminated-night-celebration.mp4",
+      "title": "Night Chariot (Theru) Procession & Vibrant Lights",
+      "titleTelugu": "రాత్రి రథోత్సవం - విద్యుద్దీప కాంతుల్లో వేమండ పురవీధులు",
+      "duration": "0:44",
+      "category": "Night Procession",
+      "categoryTelugu": "రాత్రి రథోత్సవం",
+      "description": "The enchanting night spectacle of the glowing chariot surrounded by thousands of singing faithful navigating the illuminated streets.",
+      "descriptionTelugu": "విద్యుత్ శోభిత రథంపై మరియమాత తేరు ఊరేగింపు, భక్తుల కోలాటం, రంగురంగుల లైటింగ్ దృశ్యాలు."
+    }
+  ],
+  "gallery": [
+    {
+      "id": "gal-1",
+      "src": "assets/images/gallery/01-dwajasthambam-flag-pole-illumination.jpeg",
+      "title": "Towering Illuminated Flag Mast & Japamala Matha Shrine",
+      "titleTelugu": "విద్యుద్దీప కాంతుల్లో ధ్వజస్తంభం & జపమాల మాత క్షేత్ర గోపురం",
+      "category": "Flag Mast & Illumination",
+      "categoryTelugu": "ధ్వజస్తంభం & దీపాలంకరణ",
+      "caption": "The magnificent 60+ foot illuminated flag pole adorned with brilliant LED garlands, topped with the sacred cross and holy flag, standing before the illuminated two-tier grotto tower at night."
+    },
+    {
+      "id": "gal-2",
+      "src": "assets/images/gallery/02-night-chariot-theru-procession.jpeg",
+      "title": "Grand Night Chariot (Theru) Procession",
+      "titleTelugu": "రాత్రి వేళ ఘన తేరు ప్రదక్షిణ - రథోత్సవం",
+      "category": "Procession & Chariot",
+      "categoryTelugu": "రథోత్సవం & ఊరేగింపు",
+      "caption": "Devotees carrying the illuminated grand chariot through the decorated streets of Vemanda under neon green and radiant festival lighting."
+    },
+    {
+      "id": "gal-3",
+      "src": "assets/images/gallery/03-satya-tv-coverage-broadcast-banner.jpeg",
+      "title": "Satya TV News Coverage: Grand Conclusion & Chariot Feast",
+      "titleTelugu": "సత్య టీవీ ప్రత్యక్ష ప్రసారం: ఘనంగా ముగిసిన తేరు ప్రదక్షిణ - రథోత్సవం",
+      "category": "Media & News",
+      "categoryTelugu": "మీడియా & ప్రసారాలు",
+      "caption": "Prominent Telugu television coverage celebrating the grand conclusion of the Annual Feast and the spectacular Theru Pradakshina / Rathsavam in Vemanda."
+    },
+    {
+      "id": "gal-4",
+      "src": "assets/images/gallery/04-flag-mast-dwajasthambam-erection.jpeg",
+      "title": "Erection of the Grand Dwajasthambam Flag Pole",
+      "titleTelugu": "ధ్వజస్తంభం ఏర్పాటు & స్థూప ప్రతిష్ఠ సన్నాహాలు",
+      "category": "Flag Mast & Illumination",
+      "categoryTelugu": "ధ్వజస్తంభం & దీపాలంకరణ",
+      "caption": "Villagers and volunteers uniting to hoist the towering festival pole using ropes, scaffolding, and pulleys in front of the historic R.C.M. Church and Japamala Matha Shrine."
+    },
+    {
+      "id": "gal-5",
+      "src": "assets/images/gallery/05-japamala-matha-sacred-statue.jpeg",
+      "title": "Venerated Statue of Our Lady of the Holy Rosary",
+      "titleTelugu": "జపమాల మాత పవిత్ర స్వరూపం",
+      "category": "Sacred Statues",
+      "categoryTelugu": "పవిత్ర స్వరూపాలు",
+      "caption": "The holy statue of Our Lady of the Rosary crowned in regal majesty, tenderly holding Child Jesus who is adorned with the sacred crown."
+    },
+    {
+      "id": "gal-6",
+      "src": "assets/images/gallery/06-blessed-virgin-mary-floral-garland.jpeg",
+      "title": "Blessed Mother Adorned with Radiant Floral Garlands",
+      "titleTelugu": "పుష్పమాలికలతో అలరారే గర్భిణీ మరియమాత",
+      "category": "Sacred Statues",
+      "categoryTelugu": "పవిత్ర స్వరూపాలు",
+      "caption": "Our Blessed Lady draped in sky-blue vestments, blessed with thick yellow and crimson garlands of fresh chrysanthemums and gerberas."
+    },
+    {
+      "id": "gal-7",
+      "src": "assets/images/gallery/07-village-saints-palanquin-procession.jpeg",
+      "title": "Daytime Village Saints' Palanquin Procession",
+      "titleTelugu": "గ్రామ వీధులలో పునీతుల స్వరూపాల పల్లకి ఊరేగింపు",
+      "category": "Procession & Chariot",
+      "categoryTelugu": "రథోత్సవం & ఊరేగింపు",
+      "caption": "Village faithful and women carrying the decorated palanquins of St. Michael the Archangel and St. Anthony under ceremonial umbrellas with deep piety and song."
+    },
+    {
+      "id": "gal-8",
+      "src": "assets/images/gallery/08-st-michael-archangel-statue.jpeg",
+      "title": "St. Michael the Archangel Defeating Darkness",
+      "titleTelugu": "పునీత మిఖాయేలు ప్రధాన దూత స్వరూపం",
+      "category": "Sacred Statues",
+      "categoryTelugu": "పవిత్ర స్వరూపాలు",
+      "caption": "Heroic statue of St. Michael the Archangel clad in golden armor and outstretched wings, holding the spear of victory over evil, adorned with vibrant roses and marigolds."
+    },
+    {
+      "id": "gal-9",
+      "src": "assets/images/gallery/09-japamala-matha-decorated-theru.jpeg",
+      "title": "Japamala Matha in the Palm-Crafted Chariot (Theru)",
+      "titleTelugu": "తాటి తెల్ల మట్టలతో శోభాయమానమైన తేరుపై జపమాల మాత",
+      "category": "Procession & Chariot",
+      "categoryTelugu": "రథోత్సవం & ఊరేగింపు",
+      "caption": "Mother Mary and Child Jesus seated in the masterfully crafted wooden and palm chariot adorned with pastel roses, baby's breath, and crowned with the Holy Cross."
+    },
+    {
+      "id": "gal-10",
+      "src": "assets/images/gallery/10-our-lady-of-expectation-floral-arch.jpeg",
+      "title": "Our Lady of Expectation under Grand Arch of Flowers",
+      "titleTelugu": "పుష్ప తోరణం నడుమ గర్భిణీ మరియమాత దివ్య దర్శనం",
+      "category": "Sacred Statues",
+      "categoryTelugu": "పవిత్ర స్వరూపాలు",
+      "caption": "Devotional statue of Expectant Mother Mary gracefully placed beneath an elaborate arch of white, crimson, and golden blossoms and evergreen fronds."
+    },
+    {
+      "id": "gal-11",
+      "src": "assets/images/gallery/11-night-adoration-tower-gathering.jpeg",
+      "title": "Night Adoration & Communal Gathering at the Shrine",
+      "titleTelugu": "క్షేత్రం వద్ద భక్తుల రాత్రి వేళ ఆరాధన & ప్రార్థనలు",
+      "category": "Flag Mast & Illumination",
+      "categoryTelugu": "ధ్వజస్తంభం & దీపాలంకరణ",
+      "caption": "Vemanda community gathered in heartfelt prayer and worship beneath the radiant lights of the festival tower as the sacred flag waves in the night breeze."
+    },
+    {
+      "id": "gal-12",
+      "src": "assets/images/forms/form-1-oct27-invitation.jpeg",
+      "title": "Official Festival Brochure - Page 1 (Invitation & Oct 27)",
+      "titleTelugu": "అధికారిక ఆహ్వాన పత్రిక - 1వ భాగం (అక్టోబర్ 27)",
+      "category": "Official Forms",
+      "categoryTelugu": "ఆహ్వాన పత్రికలు",
+      "caption": "Original Annual Feast invitation pamphlet showcasing Luke 1:48, Japamala Matha Grotto, and the opening day ceremonies of October 27."
+    },
+    {
+      "id": "gal-13",
+      "src": "assets/images/forms/form-2-oct28-30-schedule.jpeg",
+      "title": "Official Festival Brochure - Page 2 (Schedule Oct 28 - 30)",
+      "titleTelugu": "అధికారిక ఆహ్వాన పత్రిక - 2వ భాగం (అక్టోబర్ 28 - 30)",
+      "category": "Official Forms",
+      "categoryTelugu": "ఆహ్వాన పత్రికలు",
+      "caption": "Original schedule pamphlet outlining the 2nd, 3rd, and 4th Flag Hoistings, masses, fellowship banquets, and the grand chariot street procession."
+    }
+  ]
+}
