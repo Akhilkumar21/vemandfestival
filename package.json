@@ -4,6 +4,7 @@
     "lucide-react": "^1.72.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.5",
     "vite": "^8.3.8"
   },
   "devDependencies": {
@@ -17,7 +18,7 @@
   },
   "name": "vemanda-festival-portal",
   "version": "1.0.0",
-  "description": "Vemanda Japamala Matha Shrine - 14th Annual Feast & Google Search Experience",
+  "description": "Vemanda Japamala Matha Shrine - Annual Feast Portal with React Router",
   "type": "module",
   "scripts": {
     "dev": "vite",

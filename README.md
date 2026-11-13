@@ -1,17 +1,19 @@
 # వేమండ జపమాల మహోత్సవాలు - వార్షిక మహోత్సవాలు
-## Vemanda Japamala Matha Shrine - Annual Feast & Google Search Portal
+## Vemanda Japamala Matha Shrine - Annual Feast Web Portal
 
-A modern, responsive, high-performance web application built with **React**, **TypeScript**, and **Tailwind CSS** celebrating the **Annual Feast of Japamala Matha Shrine** in **Vemanda Village, Ventrapragada Parish** (వేమండ గ్రామము, వెంట్రప్రగడ విచారణ).
+A modern, responsive, high-performance web application built with **React**, **TypeScript**, **React Router**, and **Tailwind CSS** celebrating the **Annual Feast of Japamala Matha Shrine** in **Vemanda Village, Ventrapragada Parish** (వేమండ గ్రామము, వెంట్రప్రగడ విచారణ).
 
 ---
 
-## 🌟 Key Features
+## 🌟 Key Features & Routes
 
-1. **Google Search Experience ("Search Vemanda")**:
-   - Real-world simulation of searching `vemanda` on Google.
-   - Comprehensive **Google Knowledge Graph Panel** on the right with shrine photo collage, map location, 4 sacred flags summary, choir, and devotional notices.
-   - Authentic Google SERP results with rich sitelinks, video carousel, photo pack, and interactive "People also ask" accordions.
-   - One-click instant toggle to switch between **Google Search View** and **Official Shrine Portal View**.
+1. **Full-Featured React Router Navigation**:
+   - `/` : **Home Page** - Master feast celebration portal with majestic hero banner, quick links, stats counters, all embedded sections, and FAQ accordion.
+   - `/flags` : **4 Sacred Flags Page** - Dedicated view for the 4 sacred flag hoistings, timetable, and morning RCM church procession details.
+   - `/schedule` : **Daily Schedule Page** - Complete day-by-day timetable (Oct 27, 28, 29, 30) with mass and prayer timings.
+   - `/videos` : **Devotional Video Center** - Dedicated page showcasing 5 live HD video highlights with theater modal player.
+   - `/gallery` : **Photo Gallery Page** - Dedicated page with 13 high-resolution photos, category filters, and modal lightbox.
+   - `/notices` : **Notices & Devotee Guidelines Page** - Essential announcements, discipline rules, parish jurisdiction, and devotional FAQs.
 
 2. **White Screen & Light Aesthetic**:
    - Clean, bright, and elegant **white theme** with high-contrast slate typography, golden amber accents, and royal blue touches.
@@ -40,7 +42,7 @@ A modern, responsive, high-performance web application built with **React**, **T
    - **Deduplicated & Semantically Renamed**: All raw files deduplicated and renamed with clear semantic filenames based on content.
 
 8. **Bilingual Support (తెలుగు / English)**:
-   - One-click instant switch between Telugu and English text throughout the portal.
+   - One-click instant switch between Telugu and English text throughout all pages.
 
 ---
 
@@ -49,7 +51,7 @@ A modern, responsive, high-performance web application built with **React**, **T
 ```
 vemanda/
 ├── dist/                             # Compiled production build
-├── node_modules/                     # Dependencies (React, TS, Tailwind, Vite, Lucide)
+├── node_modules/                     # Dependencies (React, TS, Tailwind, Vite, Lucide, React Router)
 ├── originals/                        # Safe backup of untouched raw WhatsApp files
 │   ├── images/
 │   └── videos/
@@ -79,16 +81,24 @@ vemanda/
 │   ├── components/
 │   │   ├── FlagsShowcase.tsx         # The 4 Sacred Flags showcase
 │   │   ├── GalleryLightbox.tsx       # Photo gallery with modal lightbox
-│   │   ├── GoogleSearchExperience.tsx # Google Search SERP simulation
 │   │   ├── PortalFooter.tsx          # Devotional notices & shrine info
-│   │   ├── PortalHeader.tsx          # Sticky navbar with instant search & toggles
+│   │   ├── PortalHeader.tsx          # Sticky navbar with router links & instant search
 │   │   ├── ScheduleTimeline.tsx      # Day-by-day interactive timetable
+│   │   ├── ScrollToTop.tsx           # Auto scroll restoration on route navigation
 │   │   └── VideoExperience.tsx       # Video player & cinema theater modal
+│   ├── pages/
+│   │   ├── HomePage.tsx              # Master feast portal overview
+│   │   ├── FlagsPage.tsx             # Dedicated 4 sacred flags page
+│   │   ├── SchedulePage.tsx          # Dedicated schedule timetable page
+│   │   ├── VideosPage.tsx            # Dedicated video center page
+│   │   ├── GalleryPage.tsx           # Dedicated photo gallery page
+│   │   ├── NoticesPage.tsx           # Dedicated notices & FAQ page
+│   │   └── NotFoundPage.tsx          # 404 fallback page
 │   ├── data/
 │   │   └── festivalData.ts           # Centralized festival data store
 │   ├── types/
 │   │   └── festival.ts               # Strict TypeScript definitions
-│   ├── App.tsx                       # Master application component
+│   ├── App.tsx                       # Master application component with BrowserRouter
 │   ├── index.css                     # Tailwind CSS & custom styling
 │   ├── main.tsx                      # React root entry point
 │   └── vite-env.d.ts                 # Vite environment definitions

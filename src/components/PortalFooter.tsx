@@ -1,5 +1,6 @@
 import React from 'react';
-import { Church, MapPin, Bell, Shield, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Church, MapPin, Bell, Shield, Heart, ArrowRight } from 'lucide-react';
 import { NoticeItem } from '../types/festival';
 
 interface PortalFooterProps {
@@ -9,13 +10,22 @@ interface PortalFooterProps {
 
 export const PortalFooter: React.FC<PortalFooterProps> = ({ notices, isTelugu }) => {
   return (
-    <footer className="bg-slate-50 border-t border-slate-200 pt-14 pb-8 text-slate-600">
+    <footer className="bg-slate-50/90 border-t border-slate-200 pt-14 pb-8 text-slate-600 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         {/* Notice Board Section */}
-        <div id="notices" className="mb-12 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
-          <div className="flex items-center gap-2 text-amber-800 font-bold text-base mb-4">
-            <Bell className="w-5 h-5 text-amber-600" />
-            <h3>{isTelugu ? 'ముఖ్య గమనికలు & క్రమశిక్షణా నియమాలు' : 'Important Notices & Devotee Guidelines'}</h3>
+        <div id="notices" className="mb-12 p-6 rounded-3xl bg-white border border-slate-200 shadow-sm">
+          <div className="flex items-center justify-between gap-2 mb-4">
+            <div className="flex items-center gap-2 text-amber-800 font-bold text-base">
+              <Bell className="w-5 h-5 text-amber-600" />
+              <h3>{isTelugu ? 'ముఖ్య గమనికలు & క్రమశిక్షణా నియమాలు' : 'Important Notices & Devotee Guidelines'}</h3>
+            </div>
+            <Link
+              to="/notices"
+              className="text-xs font-bold text-amber-700 hover:text-amber-900 flex items-center gap-1 group"
+            >
+              <span>{isTelugu ? 'అన్ని గమనికలు & FAQ చూడండి' : 'View Full Notices & FAQ'}</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {notices.map((n) => (
@@ -32,14 +42,14 @@ export const PortalFooter: React.FC<PortalFooterProps> = ({ notices, isTelugu })
         {/* Footer Details */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-10 border-b border-slate-200">
           <div>
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center text-white font-bold">
+            <Link to="/" className="flex items-center gap-2 mb-3 group">
+              <div className="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center text-white font-bold group-hover:bg-amber-600 transition-colors">
                 <Church className="w-5 h-5" />
               </div>
-              <span className="text-base font-bold text-slate-900">
+              <span className="text-base font-bold text-slate-900 group-hover:text-amber-800 transition-colors">
                 {isTelugu ? 'వేమండ జపమాల మహోత్సవాలు' : 'Vemanda Japamala Matha'}
               </span>
-            </div>
+            </Link>
             <p className="text-xs text-slate-600 leading-relaxed mb-3">
               {isTelugu
                 ? '"తరతరముల వారు నన్ను ధన్యురాలని పిలిచెదరు" (లూకా 1:48). వేమండ గ్రామము, వెంట్రప్రగడ విచారణ వార్షిక మహోత్సవాల దివ్య జ్ఞాపిక.'
@@ -69,14 +79,39 @@ export const PortalFooter: React.FC<PortalFooterProps> = ({ notices, isTelugu })
 
           <div>
             <h4 className="text-xs font-bold text-amber-800 uppercase tracking-wider mb-3">
-              {isTelugu ? 'పండుగ విశేషాలు' : 'Feast Highlights'}
+              {isTelugu ? 'పోర్టల్ లింకులు' : 'Quick Portal Routes'}
             </h4>
-            <ul className="text-xs space-y-1.5 text-slate-600">
-              <li>• {isTelugu ? 'చతుర్విధ పతాక ఆవిష్కరణలు (అక్టోబర్ 27-30)' : '4 Sacred Flag Hoistings (Oct 27 - 30)'}</li>
-              <li>• {isTelugu ? 'ప్రతిరోజు ఉదయం 8:00 కి మేళతాళాల పతాక యాత్ర' : 'Daily 8:00 AM Flag Procession with Melathalalu'}</li>
-              <li>• {isTelugu ? 'దివ్యసత్ప్రసాద ఆరాధనలు & సమిష్టి దివ్యబలిపూజ' : 'Eucharistic Adorations & Solemn High Mass'}</li>
-              <li>• {isTelugu ? 'వేమండ గాయక బృందం దివ్య సంకీర్తనలు' : 'Hymns & Worship by Vemanda Choir Team'}</li>
-              <li>• {isTelugu ? 'అక్టోబర్ 30 సాయంత్రం 4:00 కి ఘన రథోత్సవం' : 'Grand Chariot (Theru) Procession on Oct 30 at 4 PM'}</li>
+            <ul className="text-xs space-y-2 text-slate-600">
+              <li>
+                <Link to="/flags" className="hover:text-amber-700 transition-colors flex items-center gap-1.5">
+                  <span className="text-amber-500">•</span>
+                  <span>{isTelugu ? 'చతుర్విధ పతాక ఆవిష్కరణలు (అక్టోబర్ 27-30)' : '4 Sacred Flag Hoistings (Oct 27 - 30)'}</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/schedule" className="hover:text-blue-700 transition-colors flex items-center gap-1.5">
+                  <span className="text-blue-500">•</span>
+                  <span>{isTelugu ? 'కార్యక్రమ వివరాలు & సమయాలు' : 'Daily Schedule & Holy Mass Timings'}</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/videos" className="hover:text-red-700 transition-colors flex items-center gap-1.5">
+                  <span className="text-red-500">•</span>
+                  <span>{isTelugu ? 'ప్రత్యక్ష వీడియోలు (5)' : 'Devotional Videos (5 HD Clips)'}</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/gallery" className="hover:text-emerald-700 transition-colors flex items-center gap-1.5">
+                  <span className="text-emerald-500">•</span>
+                  <span>{isTelugu ? 'చిత్ర మాలిక (13 హై-రెస్ ఫోటోలు)' : 'Photo Gallery (13 High-Res Photos)'}</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/notices" className="hover:text-purple-700 transition-colors flex items-center gap-1.5">
+                  <span className="text-purple-500">•</span>
+                  <span>{isTelugu ? 'ముఖ్య గమనికలు, సూచనలు & FAQ' : 'Devotee Notices, Guidelines & FAQ'}</span>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -87,7 +122,8 @@ export const PortalFooter: React.FC<PortalFooterProps> = ({ notices, isTelugu })
             {isTelugu ? 'వేమండ జపమాల మాత క్షేత్ర మహోత్సవ కమిటీ' : 'Vemanda Japamala Matha Shrine Committee'}.
           </span>
           <span className="flex items-center gap-1">
-            {isTelugu ? 'భక్తి శ్రద్ధలతో సమర్పితం' : 'Devotedly celebrated with faith & joy'} <Heart className="w-3.5 h-3.5 text-red-500 fill-current" />
+            {isTelugu ? 'భక్తి శ్రద్ధలతో సమర్పితం' : 'Devotedly celebrated with faith & joy'}{' '}
+            <Heart className="w-3.5 h-3.5 text-red-500 fill-current" />
           </span>
         </div>
       </div>
