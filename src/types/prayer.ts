@@ -89,3 +89,4 @@ export const PRAYER_CATEGORIES: Record<PrayerCategory, PrayerCategoryMeta> = {
     descriptionTe: 'మనసులోని ప్రత్యేక విన్నపాలు మరియమాత మధ్యవర్తిత్వానికి సమర్పణ',
   },
 };
+

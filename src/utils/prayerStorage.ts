@@ -176,3 +176,4 @@ export const incrementAmenCount = (id: string): PrayerRequest[] => {
   savePrayerRequests(updated);
   return updated;
 };
+

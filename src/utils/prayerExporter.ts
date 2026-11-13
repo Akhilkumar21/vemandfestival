@@ -455,3 +455,4 @@ export const printPrayerDocument = (prayers: PrayerRequest[], isTelugu: boolean)
     printWindow.print();
   }, 400);
 };
+

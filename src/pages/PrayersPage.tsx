@@ -669,3 +669,4 @@ export const PrayersPage: React.FC<PrayersPageProps> = ({ isTelugu, searchQuery 
     </main>
   );
 };
+
