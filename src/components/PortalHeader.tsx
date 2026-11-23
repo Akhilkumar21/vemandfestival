@@ -13,7 +13,10 @@ import {
   X,
   Home,
   Heart,
+  Upload,
+  Users,
 } from 'lucide-react';
+import { MediaUploadModal } from './MediaUploadModal';
 
 interface PortalHeaderProps {
   isTelugu: boolean;
@@ -29,6 +32,7 @@ export const PortalHeader: React.FC<PortalHeaderProps> = ({
   onSearchChange,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [uploadModalOpen, setUploadModalOpen] = useState(false);
 
   const navLinks = [
     {
@@ -67,6 +71,12 @@ export const PortalHeader: React.FC<PortalHeaderProps> = ({
       labelEn: 'Gallery (13)',
       labelTe: 'చిత్ర మాలిక (13)',
       icon: ImageIcon,
+    },
+    {
+      to: '/community',
+      labelEn: 'Devotee Media',
+      labelTe: 'భక్తుల వేదిక',
+      icon: Users,
     },
     {
       to: '/notices',
@@ -122,8 +132,18 @@ export const PortalHeader: React.FC<PortalHeaderProps> = ({
             </div>
           </div>
 
-          {/* Controls: Language Toggle & Mobile Hamburger */}
+          {/* Controls: Upload CTA, Language Toggle & Mobile Hamburger */}
           <div className="flex items-center gap-2">
+            {/* Quick Upload Button */}
+            <button
+              onClick={() => setUploadModalOpen(true)}
+              className="px-3 py-1.5 rounded-full text-xs font-bold bg-amber-500 hover:bg-amber-600 text-white shadow-sm shadow-amber-200 transition-all flex items-center gap-1.5 active:scale-95"
+              title={isTelugu ? 'ఫోటో లేదా వీడియో అప్‌లోడ్ చేయండి' : 'Upload photo or video'}
+            >
+              <Upload className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">{isTelugu ? 'అప్‌లోడ్' : 'Upload'}</span>
+            </button>
+
             {/* Language Switcher */}
             <button
               onClick={onToggleLanguage}
@@ -219,6 +239,13 @@ export const PortalHeader: React.FC<PortalHeaderProps> = ({
           </nav>
         )}
       </div>
+
+      {/* Global Upload Modal Triggered from Header */}
+      <MediaUploadModal
+        isOpen={uploadModalOpen}
+        onClose={() => setUploadModalOpen(false)}
+        isTelugu={isTelugu}
+      />
     </header>
   );
 };

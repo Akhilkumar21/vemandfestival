@@ -10,6 +10,7 @@ import { SchedulePage } from './pages/SchedulePage';
 import { PrayersPage } from './pages/PrayersPage';
 import { VideosPage } from './pages/VideosPage';
 import { GalleryPage } from './pages/GalleryPage';
+import { CommunityPage } from './pages/CommunityPage';
 import { NoticesPage } from './pages/NoticesPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
@@ -99,6 +100,15 @@ export const App: React.FC = () => {
               element={
                 <GalleryPage
                   data={festivalData}
+                  isTelugu={isTelugu}
+                  searchQuery={searchQuery}
+                />
+              }
+            />
+            <Route
+              path="/community"
+              element={
+                <CommunityPage
                   isTelugu={isTelugu}
                   searchQuery={searchQuery}
                 />

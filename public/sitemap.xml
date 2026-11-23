@@ -1,46 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Vemanda Official Village & Festival Portal (1st Priority) -->
   <url>
     <loc>https://vemandfestival.vercel.app/</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- Vemanda Devotee Photo & Video Upload Community Hub -->
   <url>
-    <loc>https://vemandfestival.vercel.app/flags</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://vemandfestival.vercel.app/schedule</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://vemandfestival.vercel.app/prayers</loc>
-    <lastmod>2026-11-13</lastmod>
+    <loc>https://vemandfestival.vercel.app/community</loc>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
+  <!-- Vemanda 4 Sacred Flags Showcase -->
+  <url>
+    <loc>https://vemandfestival.vercel.app/flags</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- Vemanda Daily Schedule & Mass Timings -->
+  <url>
+    <loc>https://vemandfestival.vercel.app/schedule</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- Vemanda Prayer Dashboard -->
+  <url>
+    <loc>https://vemandfestival.vercel.app/prayers</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- Vemanda Video Showcase & Highlights -->
   <url>
     <loc>https://vemandfestival.vercel.app/videos</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
+  <!-- Vemanda Sacred Photo Gallery -->
   <url>
     <loc>https://vemandfestival.vercel.app/gallery</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- Vemanda Notices & Guidelines -->
+  <url>
+    <loc>https://vemandfestival.vercel.app/notices</loc>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://vemandfestival.vercel.app/notices</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
 </urlset>
-

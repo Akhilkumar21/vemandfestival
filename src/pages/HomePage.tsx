@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FestivalData } from '../types/festival';
 import { FlagsShowcase } from '../components/FlagsShowcase';
 import { ScheduleTimeline } from '../components/ScheduleTimeline';
 import { VideoExperience } from '../components/VideoExperience';
 import { GalleryLightbox } from '../components/GalleryLightbox';
+import { CommunityMediaShowcase } from '../components/CommunityMediaShowcase';
+import { MediaUploadModal } from '../components/MediaUploadModal';
+import { MediaType } from '../types/media';
 import { SeoHead } from '../components/SeoHead';
 import {
   Flag,
@@ -23,6 +26,8 @@ import {
   Flame,
   PlusCircle,
   MapPin,
+  Upload,
+  Users,
 } from 'lucide-react';
 
 interface HomePageProps {
@@ -32,7 +37,14 @@ interface HomePageProps {
 }
 
 export const HomePage: React.FC<HomePageProps> = ({ data, isTelugu, searchQuery }) => {
-  const [openFaq, setOpenFaq] = React.useState<number | null>(null);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [uploadModalOpen, setUploadModalOpen] = useState<boolean>(false);
+  const [uploadModalType, setUploadModalType] = useState<MediaType>('image');
+
+  const handleOpenUpload = (type: MediaType = 'image') => {
+    setUploadModalType(type);
+    setUploadModalOpen(true);
+  };
 
   const faqs = [
     {
@@ -180,10 +192,17 @@ export const HomePage: React.FC<HomePageProps> = ({ data, isTelugu, searchQuery 
                   <Bell className="w-4 h-4 text-amber-600" />
                   {isTelugu ? 'ముఖ్య గమనికలు' : 'Notices & FAQ'}
                 </Link>
+                <button
+                  onClick={() => handleOpenUpload('image')}
+                  className="px-5 py-2.5 rounded-full bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs md:text-sm shadow-md shadow-amber-200 transition-all flex items-center gap-1.5 active:scale-95"
+                >
+                  <Upload className="w-4 h-4" />
+                  <span>{isTelugu ? 'ఫోటో/వీడియో అప్‌లోడ్' : 'Upload Media'}</span>
+                </button>
               </div>
 
-              {/* 4 Stats Cards with Direct Route Links */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {/* 5 Stats Cards with Direct Route Links */}
+              <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
                 <Link
                   to="/flags"
                   className="p-3 rounded-2xl bg-white border border-slate-200 hover:border-amber-400 shadow-sm text-center transition-all hover:shadow group"
@@ -226,6 +245,17 @@ export const HomePage: React.FC<HomePageProps> = ({ data, isTelugu, searchQuery 
                   </div>
                   <div className="text-[11px] text-slate-600 font-semibold uppercase tracking-wider">
                     {isTelugu ? 'హై-రెస్ చిత్రాలు' : 'High-Res Photos'}
+                  </div>
+                </Link>
+                <Link
+                  to="/community"
+                  className="p-3 rounded-2xl bg-white border border-slate-200 hover:border-purple-400 shadow-sm text-center transition-all hover:shadow group col-span-2 sm:col-span-1"
+                >
+                  <div className="text-2xl font-extrabold text-purple-600 group-hover:scale-105 transition-transform flex items-center justify-center gap-1">
+                    <Users className="w-6 h-6" />
+                  </div>
+                  <div className="text-[11px] text-slate-600 font-semibold uppercase tracking-wider">
+                    {isTelugu ? 'భక్తుల సమర్పణలు' : 'Devotee Media'}
                   </div>
                 </Link>
               </div>
@@ -526,7 +556,30 @@ export const HomePage: React.FC<HomePageProps> = ({ data, isTelugu, searchQuery 
           <GalleryLightbox gallery={data.gallery} isTelugu={isTelugu} searchQuery={searchQuery} />
         </section>
 
-        {/* Section 5: Devotional FAQ & Quick Answers */}
+        {/* Section 5: Devotee Community Media & Live Uploads */}
+        <section id="community-media" className="relative">
+          <div className="flex items-center justify-between mb-4">
+            <span className="text-xs font-bold text-amber-700 uppercase tracking-widest">
+              {isTelugu ? 'విభాగం 5' : 'Section 5'}
+            </span>
+            <Link
+              to="/community"
+              className="text-xs font-bold text-amber-700 hover:text-amber-900 flex items-center gap-1 group"
+            >
+              <span>{isTelugu ? 'భక్తుల వేదిక పూర్తి పేజీ చూడండి' : 'Dedicated Community Hub'}</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+          <CommunityMediaShowcase
+            isTelugu={isTelugu}
+            searchQuery={searchQuery}
+            onOpenUploadModal={handleOpenUpload}
+            limit={6}
+            showHeader={true}
+          />
+        </section>
+
+        {/* Section 6: Devotional FAQ & Quick Answers */}
         <section id="faq" className="p-6 md:p-8 rounded-3xl bg-white border border-slate-200 shadow-sm">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
@@ -583,6 +636,14 @@ export const HomePage: React.FC<HomePageProps> = ({ data, isTelugu, searchQuery 
           </div>
         </section>
       </div>
+
+      {/* Standalone Upload Modal */}
+      <MediaUploadModal
+        isOpen={uploadModalOpen}
+        onClose={() => setUploadModalOpen(false)}
+        isTelugu={isTelugu}
+        defaultType={uploadModalType}
+      />
     </main>
   );
 };

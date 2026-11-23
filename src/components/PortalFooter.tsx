@@ -113,6 +113,12 @@ export const PortalFooter: React.FC<PortalFooterProps> = ({ notices, isTelugu })
                 </Link>
               </li>
               <li>
+                <Link to="/community" className="hover:text-amber-700 transition-colors flex items-center gap-1.5 font-semibold text-amber-800">
+                  <span className="text-amber-500">•</span>
+                  <span>{isTelugu ? 'భక్తుల వేదిక (ఫోటోలు & వీడియోల సమర్పణ)' : 'Devotee Community (Photo & Video Uploads)'}</span>
+                </Link>
+              </li>
+              <li>
                 <Link to="/notices" className="hover:text-purple-700 transition-colors flex items-center gap-1.5">
                   <span className="text-purple-500">•</span>
                   <span>{isTelugu ? 'ముఖ్య గమనికలు, సూచనలు & FAQ' : 'Devotee Notices, Guidelines & FAQ'}</span>
