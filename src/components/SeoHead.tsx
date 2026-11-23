@@ -56,6 +56,16 @@ export const SeoHead: React.FC<SeoHeadProps> = ({
     setMetaTag('name', 'twitter:title', title);
     setMetaTag('name', 'twitter:description', description);
     setMetaTag('name', 'twitter:image', ogImage);
+
+    // 6. Google Search Thumbnail & Image Source
+    setMetaTag('name', 'thumbnail', ogImage);
+    let imageSrcLink = document.querySelector('link[rel="image_src"]') as HTMLLinkElement | null;
+    if (!imageSrcLink) {
+      imageSrcLink = document.createElement('link');
+      imageSrcLink.rel = 'image_src';
+      document.head.appendChild(imageSrcLink);
+    }
+    imageSrcLink.href = ogImage;
   }, [title, description, canonicalPath, keywords, ogImage]);
 
   return null;

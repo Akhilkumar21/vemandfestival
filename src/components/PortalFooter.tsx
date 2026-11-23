@@ -66,13 +66,24 @@ export const PortalFooter: React.FC<PortalFooterProps> = ({ notices, isTelugu })
                 <MapPin className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
                 <span>
                   {isTelugu
-                    ? 'వేమండ గ్రామము, వెంట్రప్రగడ విచారణ, కృష్ణా జిల్లా, ఆంధ్రప్రదేశ్'
-                    : 'Vemanda Village, Ventrapragada Parish, Krishna District, Andhra Pradesh, India'}
+                    ? 'ఆర్.సి.యం. చర్చ్, వేమండ గ్రామము (FV6X+M22), ఉంగుటూరు మండలం, కృష్ణా జిల్లా, ఆంధ్రప్రదేశ్ (521311)'
+                    : 'RCM Church, Vemanda (FV6X+M22), Unguturu Mandal, Krishna District, AP 521311'}
                 </span>
               </div>
               <div className="flex items-center gap-2 text-slate-600">
                 <Shield className="w-4 h-4 text-blue-600 flex-shrink-0" />
                 <span>{isTelugu ? 'ఆర్.సి.యం. దేవాలయ విచారణ పరిధి' : 'Under R.C.M. Church Parish Jurisdiction'}</span>
+              </div>
+              <div className="pt-2">
+                <a
+                  href="https://www.google.com/maps/dir//RCM+Church,Vemanda,+FV6X%2BM22,+Vemanda,Unguturu,+mandal,+Andhra+Pradesh+521311/@16.4616314,80.8975302,17z/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-2xs transition-all active:scale-95"
+                >
+                  <MapPin className="w-3.5 h-3.5 text-red-200" />
+                  <span>{isTelugu ? 'గూగుల్ మ్యాప్స్ దారి (Directions) ↗' : 'Google Maps Directions ↗'}</span>
+                </a>
               </div>
             </div>
           </div>

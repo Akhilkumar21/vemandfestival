@@ -25,6 +25,13 @@ import {
   Upload,
   Users,
   Film,
+  Compass,
+  Navigation,
+  Train,
+  Bus,
+  Car,
+  MessageCircle,
+  Radio,
 } from 'lucide-react';
 
 interface HomePageProps {
@@ -82,16 +89,16 @@ export const HomePage: React.FC<HomePageProps> = ({ data, isTelugu, searchQuery 
       <SeoHead
         title={
           isTelugu
-            ? 'వేమండ (Vemanda) - గ్రామ అధికారిక పోర్టల్ | Unguturu, PIN 521311'
-            : 'Vemanda (వేమండ) - Official Village Portal | Unguturu Mandal, PIN 521311'
+            ? 'వేమండ (Vemanda | Vemand) - గ్రామ & ఉత్సవ అధికారిక పోర్టల్ | Unguturu (PIN 521311)'
+            : 'Vemanda (వేమండ | Vemand) - Official Village & Festival Portal | Unguturu (PIN 521311)'
         }
         description={
           isTelugu
-            ? 'వేమండ (Vemanda) గ్రామం, ఉంగుటూరు మండలం, కృష్ణా జిల్లా, ఆంధ్రప్రదేశ్ (పిన్ కోడ్: 521311). ప్రసిద్ధ వేమండ జపమాల మాత క్షేత్ర వార్షిక మహోత్సవాలు (అక్టోబర్ 27-30), 4 పతాక ఆవిష్కరణలు, పూజలు, ప్రార్థనలు & రథోత్సవ సమగ్ర సమాచారం.'
-            : 'Official portal for Vemanda (వేమండ) Village in Unguturu Mandal, Krishna District, Andhra Pradesh (PIN 521311), Ventrapragada Parish. Home of Vemanda Japamala Matha Shrine, Annual Festival (Oct 27-30), 4 sacred flags, mass schedule, prayer dashboard, and chariot procession.'
+            ? 'వేమండ (Vemanda / Vemand) గ్రామ అధికారిక పోర్టల్. ఉంగుటూరు మండలం, కృష్ణా జిల్లా (పిన్ 521311). ప్రసిద్ధ వేమండ జపమాల మాత క్షేత్ర వార్షిక మహోత్సవాలు (అక్టోబర్ 27-30), 4 పవిత్ర పతాకావిష్కరణలు, దివ్యబలిపూజలు, ప్రార్థనలు & రథోత్సవ సమగ్ర సమాచారం.'
+            : 'Official portal for Vemanda (వేమండ | Vemand) Village in Unguturu Mandal, Krishna District, Andhra Pradesh (PIN 521311), Ventrapragada Parish. Sacred Japamala Matha Shrine Annual Festival (Oct 27-30), 4 sacred flags, mass schedule, prayer petitions, and chariot procession.'
         }
         canonicalPath="/"
-        keywords="Vemanda, వేమండ, Vemanda Village, Vemanda Unguturu, Vemanda Krishna District, Vemanda 521311, Unguturu Mandal, Ventrapragada, Indupalli, Vemanda Festival, Vemanda Japamala Matha, Vemanda Mahotsavalu"
+        keywords="vemanda, Vemanda, వేమండ, vemand, Vemand, vemanda village, Vemanda Village, వేమండ గ్రామం, vemanda festival, Vemanda Festival, vemand festival, Vemanda Unguturu, Vemanda Krishna District, Vemanda 521311, Unguturu Mandal, Ventrapragada, Indupalli, Vemanda Japamala Matha, Vemanda Mahotsavalu"
       />
 
       {/* Majestic Hero Banner */}
@@ -288,6 +295,54 @@ export const HomePage: React.FC<HomePageProps> = ({ data, isTelugu, searchQuery 
         </div>
       </section>
 
+      {/* Live Broadcast & WhatsApp Status Share Bar */}
+      <section className="bg-gradient-to-r from-amber-50/90 via-white to-blue-50/90 border-b border-amber-200/80 py-3.5 px-4 shadow-2xs">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+          {/* Live Stream Callout */}
+          <div className="flex items-center gap-2.5 text-slate-800">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-red-600" />
+            </span>
+            <span className="font-extrabold text-red-700 uppercase tracking-wider text-[11px] flex items-center gap-1">
+              <Radio className="w-3.5 h-3.5" />
+              <span>{isTelugu ? 'ప్రత్యక్ష ప్రసారం (Live Stream)' : 'Feast Live Stream'}</span>
+            </span>
+            <span className="text-slate-400 hidden sm:inline">•</span>
+            <span className="text-slate-600 font-medium hidden md:inline">
+              {isTelugu
+                ? 'అక్టోబర్ 27-30 పతాకావిష్కరణలు, దివ్యబలిపూజలు & రథోత్సవ దృశ్యాలు ప్రత్యక్ష ప్రసారం'
+                : '4 Sacred Flags, Eucharistic Masses & Grand Chariot broadcasted live Oct 27–30'}
+            </span>
+          </div>
+
+          {/* Quick Actions: Watch Live & WhatsApp Share */}
+          <div className="flex items-center gap-2.5 flex-wrap self-stretch sm:self-auto justify-end">
+            <Link
+              to="/videos"
+              className="px-3.5 py-1.5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold flex items-center gap-1.5 shadow-2xs transition-all active:scale-95"
+            >
+              <Radio className="w-3.5 h-3.5" />
+              <span>{isTelugu ? 'లైవ్ వీడియోల కేంద్రం' : 'Live Video Hub'}</span>
+            </Link>
+
+            <a
+              href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
+                isTelugu
+                  ? '🚩 *వేమండ జపమాల మాత వార్షిక మహోత్సవాలు (అక్టోబర్ 27-30)*\n\nపవిత్ర 4 పతాకావిష్కరణలు, దివ్యబలిపూజలు మరియు మహా తేరు రథోత్సవం.\n\nపూర్తి కార్యక్రమ పట్టిక, ప్రత్యక్ష వీడియోలు మరియు ప్రార్థనల కోసం అధికారిక పోర్టల్ చూడండి:\nhttps://vemandfestival.vercel.app/'
+                  : '🚩 *Vemanda Japamala Matha Shrine Annual Festival (Oct 27-30)*\n\nCelebrate the 4 Sacred Flag Hoistings, Eucharistic Masses & Grand Chariot (Theru) Procession in Vemanda Village, Krishna District, AP.\n\nOfficial Portal:\nhttps://vemandfestival.vercel.app/'
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold flex items-center gap-1.5 shadow-2xs transition-all active:scale-95"
+            >
+              <MessageCircle className="w-3.5 h-3.5" />
+              <span>{isTelugu ? 'వాట్సాప్‌లో షేర్ చేయండి' : 'Share on WhatsApp'}</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Main Content Sections with Links to Dedicated Pages */}
       <div className="max-w-7xl mx-auto px-4 md:px-8 space-y-16 py-10">
         {/* Comprehensive SEO Content Section: About Vemanda Village & The Japamala Matha Feast */}
@@ -439,6 +494,169 @@ export const HomePage: React.FC<HomePageProps> = ({ data, isTelugu, searchQuery 
             </div>
           </div>
         </section>
+
+        {/* Section: Pilgrim Travel & Route Guide - How to Reach Vemanda Village */}
+        <section id="travel-guide" className="rounded-3xl bg-white border border-slate-200 p-6 md:p-10 shadow-sm space-y-8">
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-300 text-blue-900 text-xs font-bold uppercase tracking-wider shadow-xs">
+              <Compass className="w-4 h-4 text-blue-600" />
+              <span>{isTelugu ? 'క్షేత్ర మార్గదర్శి & ప్రయాణ వివరాలు' : 'Pilgrim Travel & Route Guide'}</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+              {isTelugu
+                ? 'ఎలా చేరుకోవాలి? - వేమండ గ్రామం & జపమాల మాత క్షేత్రం'
+                : 'How to Reach Vemanda Village & Japamala Matha Shrine'}
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              {isTelugu
+                ? 'కృష్ణా జిల్లా ఉంగుటూరు మండలంలోని వేమండ గ్రామం (పిన్ కోడ్ 521311) కు రైలు, బస్సు మరియు రోడ్డు మార్గం ద్వారా ప్రయాణం అత్యంత సులభం.'
+                : 'Vemanda Village in Unguturu Mandal, Krishna District, AP (PIN 521311) is conveniently connected via Train, APSRTC Bus, and National Highway routes.'}
+            </p>
+          </div>
+
+          {/* 4 Travel Modes Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {/* 1. Train */}
+            <div className="p-5 rounded-2xl bg-slate-50/70 border border-slate-200 hover:border-blue-400 transition-all flex flex-col justify-between space-y-3">
+              <div>
+                <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-800 flex items-center justify-center font-bold mb-3 shadow-2xs">
+                  <Train className="w-5 h-5 text-blue-700" />
+                </div>
+                <h3 className="text-sm sm:text-base font-bold text-slate-900">
+                  {isTelugu ? '🚆 సమీప రైల్వే స్టేషన్లు' : '🚆 By Train'}
+                </h3>
+                <ul className="text-xs text-slate-600 mt-2 space-y-1.5 leading-relaxed">
+                  <li>
+                    <strong className="text-slate-800 font-semibold">గుడివాడ జంక్షన్ (GDV):</strong> ~18 km (ప్రధాన జంక్షన్)
+                  </li>
+                  <li>
+                    <strong className="text-slate-800 font-semibold">తరిగొప్పుల (TGU):</strong> ~8 km (సమీప స్టేషన్)
+                  </li>
+                  <li>
+                    <strong className="text-slate-800 font-semibold">ఇందుపల్లి (IDP):</strong> ~12 km
+                  </li>
+                  <li>
+                    <strong className="text-slate-800 font-semibold">విజయవాడ జంక్షన్ (BZA):</strong> ~45 km
+                  </li>
+                </ul>
+              </div>
+              <p className="text-[11px] text-blue-700 bg-blue-50/80 p-2 rounded-lg font-medium">
+                {isTelugu
+                  ? 'రైల్వే స్టేషన్ల నుండి వేమండకు ఆటోలు మరియు ఆర్టీసీ బస్సులు అందుబాటులో ఉన్నాయి.'
+                  : 'Autos and connecting buses operate frequently from Gudivada & Tarigoppula.'}
+              </p>
+            </div>
+
+            {/* 2. Bus */}
+            <div className="p-5 rounded-2xl bg-slate-50/70 border border-slate-200 hover:border-emerald-400 transition-all flex flex-col justify-between space-y-3">
+              <div>
+                <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold mb-3 shadow-2xs">
+                  <Bus className="w-5 h-5 text-emerald-700" />
+                </div>
+                <h3 className="text-sm sm:text-base font-bold text-slate-900">
+                  {isTelugu ? '🚌 బస్సు సౌకర్యం (APSRTC)' : '🚌 By APSRTC Bus'}
+                </h3>
+                <ul className="text-xs text-slate-600 mt-2 space-y-1.5 leading-relaxed">
+                  <li>
+                    <strong className="text-slate-800 font-semibold">విజయవాడ నుండి:</strong> గుడివాడ లేదా ఏలూరు బస్సులలో ఉంగుటూరు / వెంట్రప్రగడ స్టేజి వద్ద దిగవచ్చు.
+                  </li>
+                  <li>
+                    <strong className="text-slate-800 font-semibold">గుడివాడ నుండి:</strong> వెంట్రప్రగడ మీదుగా తరచూ బస్సులు మరియు లోకల్ ఆటోలు కలవు.
+                  </li>
+                  <li>
+                    <strong className="text-slate-800 font-semibold">ఉంగుటూరు సెంటర్:</strong> ఉంగుటూరు నుండి వేమండకు ప్రతి 10 నిమిషాలకు ఆటోలు లభిస్తాయి (~4 km).
+                  </li>
+                </ul>
+              </div>
+              <p className="text-[11px] text-emerald-700 bg-emerald-50/80 p-2 rounded-lg font-medium">
+                {isTelugu
+                  ? 'పండుగ దినాలలో భక్తుల సౌకర్యార్థం ప్రత్యేక సర్వీసులు నడపబడతాయి.'
+                  : 'Special feeder autos & shuttle services operate during the Oct 27-30 feast.'}
+              </p>
+            </div>
+
+            {/* 3. Road / Car */}
+            <div className="p-5 rounded-2xl bg-slate-50/70 border border-slate-200 hover:border-amber-400 transition-all flex flex-col justify-between space-y-3">
+              <div>
+                <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-bold mb-3 shadow-2xs">
+                  <Car className="w-5 h-5 text-amber-700" />
+                </div>
+                <h3 className="text-sm sm:text-base font-bold text-slate-900">
+                  {isTelugu ? '🚗 రోడ్డు మార్గం (By Road / Car)' : '🚗 By Road / Car'}
+                </h3>
+                <ul className="text-xs text-slate-600 mt-2 space-y-1.5 leading-relaxed">
+                  <li>
+                    <strong className="text-slate-800 font-semibold">విజయవాడ నుండి (45 km):</strong> విజయవాడ → కంకిపాడు లేదా గన్నవరం → ఉంగుటూరు → వేమండ.
+                  </li>
+                  <li>
+                    <strong className="text-slate-800 font-semibold">గుడివాడ నుండి (18 km):</strong> గుడివాడ → వెంట్రప్రగడ → వేమండ (25 నిమిషాలు).
+                  </li>
+                  <li>
+                    <strong className="text-slate-800 font-semibold">ఏలూరు నుండి (38 km):</strong> ఏలూరు → ఉంగుటూరు → వేమండ.
+                  </li>
+                </ul>
+              </div>
+              <p className="text-[11px] text-amber-800 bg-amber-50/80 p-2 rounded-lg font-medium">
+                {isTelugu
+                  ? 'మంచి తారు రోడ్డు సౌకర్యం కలదు. దేవాలయం ప్రాంగణంలో వాహన పార్కింగ్ కలదు.'
+                  : 'Smooth asphalt road with ample pilgrim vehicle parking near shrine grounds.'}
+              </p>
+            </div>
+
+            {/* 4. Direct GPS Navigation */}
+            <div className="p-5 rounded-2xl bg-gradient-to-br from-blue-50 via-white to-amber-50 border-2 border-blue-300 hover:border-blue-500 transition-all flex flex-col justify-between space-y-3">
+              <div>
+                <div className="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold mb-3 shadow-2xs">
+                  <Navigation className="w-5 h-5 text-white" />
+                </div>
+                <h3 className="text-sm sm:text-base font-bold text-slate-900">
+                  {isTelugu ? '📍 అధికారిక గూగుల్ మ్యాప్స్' : '📍 Official Google Maps'}
+                </h3>
+                <div className="text-xs text-slate-600 mt-2 space-y-1.5 leading-relaxed">
+                  <p>
+                    <strong className="text-slate-900 font-bold block">
+                      {isTelugu ? 'ఆర్.సి.యం. చర్చ్, వేమండ' : 'RCM Church, Vemanda'}
+                    </strong>
+                    <span className="text-[11px] text-slate-500 block">
+                      FV6X+M22, Vemanda, Unguturu Mandal, AP 521311
+                    </span>
+                  </p>
+                  <p className="font-mono text-slate-800 text-[11px] bg-white p-1.5 rounded-lg border border-slate-200">
+                    16.46163° N, 80.89753° E
+                  </p>
+                  <p className="text-[11px] text-amber-800 bg-amber-50 p-1.5 rounded-lg border border-amber-200 font-medium">
+                    {isTelugu
+                      ? 'క్లిక్ చేయగానే మీ ప్రస్తుత ప్రదేశం నుండి నేరుగా టర్న్-బై-టర్న్ నావిగేషన్ ప్రారంభమగును.'
+                      : 'Opens direct turn-by-turn live navigation from your current location.'}
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-2 pt-1">
+                <a
+                  href="https://www.google.com/maps/dir//RCM+Church,Vemanda,+FV6X%2BM22,+Vemanda,Unguturu,+mandal,+Andhra+Pradesh+521311/@16.4616314,80.8975302,17z/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-2.5 px-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs shadow-md shadow-blue-200 transition-all flex items-center justify-center gap-1.5 active:scale-95"
+                >
+                  <Navigation className="w-3.5 h-3.5" />
+                  <span>{isTelugu ? 'గూగుల్ మ్యాప్స్ దారి (Directions) ↗' : 'Google Maps Directions ↗'}</span>
+                </a>
+
+                <a
+                  href="https://www.google.com/maps/place/RCM+Church,Vemanda/@16.4616314,80.8975302,17z/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-2 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-700 font-bold text-xs border border-slate-300 transition-all flex items-center justify-center gap-1.5 shadow-2xs text-center"
+                >
+                  <MapPin className="w-3.5 h-3.5 text-red-600" />
+                  <span>{isTelugu ? 'లొకేషన్ చూడండి (View on Maps) ↗' : 'View Location on Maps ↗'}</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Featured Section: Devotee Prayer Petitions Dashboard & Highlights */}
         <section className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-amber-500/10 via-rose-500/10 to-emerald-500/10 border-2 border-amber-300/80 p-6 md:p-8 shadow-sm">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
@@ -477,6 +695,151 @@ export const HomePage: React.FC<HomePageProps> = ({ data, isTelugu, searchQuery 
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Section: Thanksgiving & Miracle Testimonies - Answered Prayers */}
+        <section id="testimonies" className="rounded-3xl bg-white border border-slate-200 p-6 md:p-10 shadow-sm space-y-8">
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-50 border border-rose-300 text-rose-900 text-xs font-bold uppercase tracking-wider shadow-xs">
+              <Heart className="w-4 h-4 text-rose-600 fill-rose-600" />
+              <span>{isTelugu ? 'కృతజ్ఞతా సాక్ష్యాలు' : 'Thanksgiving & Answered Prayers'}</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+              {isTelugu
+                ? 'విశ్వాసుల కృతజ్ఞతా సాక్ష్యాలు & అద్భుత వరాలు'
+                : 'Devotee Testimonies: Answered Prayers & Miracles'}
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              {isTelugu
+                ? 'వేమండ జపమాల మాత తల్లికి మొక్కుబడి చేసి, ప్రార్థించి భక్తులు పొందుకున్న అద్భుత వరాలు మరియు కృతజ్ఞతా సమర్పణలు.'
+                : 'Real testimonies from faithful devotees whose prayers for children, divine health healing, and family prosperity were answered through Mother Mary’s intercession.'}
+            </p>
+          </div>
+
+          {/* 3 Real Testimonies Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Card 1: Safe Childbirth & Twins Blessing */}
+            <div className="p-6 rounded-2xl bg-gradient-to-b from-rose-50/50 via-white to-white border border-rose-200 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="px-2.5 py-1 rounded-full bg-rose-100 text-rose-800 text-[10px] font-extrabold uppercase tracking-wider flex items-center gap-1">
+                    <Baby className="w-3.5 h-3.5" />
+                    <span>{isTelugu ? 'సంతాన వరము' : 'Childbirth Blessing'}</span>
+                  </span>
+                  <span className="text-amber-500 text-sm">★★★★★</span>
+                </div>
+                <h3 className="text-base font-bold text-slate-900">
+                  {isTelugu ? 'కవల పిల్లల సుఖ ప్రసవం & సంతాన దీవెన' : 'Safe Childbirth & Twins Miracle'}
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed italic">
+                  {isTelugu
+                    ? '"వైద్యులు ఎన్నో చిక్కులు చెప్పినప్పటికీ, వేమండ జపమాల మాత సన్నిధిలో మొక్కుబడి చేసి రోజూ జపమాల ప్రార్థించాము. తల్లి అపార కరుణతో ఆరోగ్యకరమైన కవల పిల్లలు జన్మించారు. మా కుటుంబం నిరంతరం మాతకు కృతజ్ఞతలు తెలుపుకుంటుంది."'
+                    : '"Despite doctors warning of high-risk delivery complications, we pledged our vows to Vemanda Japamala Matha and prayed the Holy Rosary daily. By Mother Mary’s grace, we were blessed with healthy twins."'}
+                </p>
+              </div>
+
+              <div className="pt-3 border-t border-rose-100 flex items-center justify-between text-xs">
+                <div>
+                  <span className="font-bold text-slate-800 block">Joseph & Mary</span>
+                  <span className="text-[11px] text-slate-500">{isTelugu ? 'విజయవాడ' : 'Vijayawada'}</span>
+                </div>
+                <span className="text-[10px] text-rose-700 font-bold bg-rose-50 px-2 py-0.5 rounded-full border border-rose-200">
+                  {isTelugu ? 'మొక్కుబడి సమర్పణ' : 'Answered Prayer'}
+                </span>
+              </div>
+            </div>
+
+            {/* Card 2: Divine Healing */}
+            <div className="p-6 rounded-2xl bg-gradient-to-b from-blue-50/50 via-white to-white border border-blue-200 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="px-2.5 py-1 rounded-full bg-blue-100 text-blue-800 text-[10px] font-extrabold uppercase tracking-wider flex items-center gap-1">
+                    <Activity className="w-3.5 h-3.5" />
+                    <span>{isTelugu ? 'దివ్య స్వస్థత' : 'Divine Healing'}</span>
+                  </span>
+                  <span className="text-amber-500 text-sm">★★★★★</span>
+                </div>
+                <h3 className="text-base font-bold text-slate-900">
+                  {isTelugu ? 'తీవ్ర అనారోగ్యం నుండి సంపూర్ణ స్వస్థత' : 'Miraculous Health Recovery'}
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed italic">
+                  {isTelugu
+                    ? '"దీర్ఘకాలిక తీవ్ర వ్యాధితో నిస్సహాయ స్థితిలో ఉన్నప్పుడు, అక్టోబర్ మహోత్సవాల దివ్యబలిపూజలో ప్రత్యేక ప్రార్థన సమర్పించాము. తల్లి దయవల్ల క్రమంగా సంపూర్ణ ఆరోగ్యం చేకూరింది. ప్రతి సంవత్సరం కుటుంబ సమేతంగా ఉత్సవాలకు వస్తున్నాము."'
+                    : '"Suffering from a chronic medical illness, our family offered petitions during the annual feast concelebrated mass. Through Mother Mary’s divine intercession, complete recovery was granted."'}
+                </p>
+              </div>
+
+              <div className="pt-3 border-t border-blue-100 flex items-center justify-between text-xs">
+                <div>
+                  <span className="font-bold text-slate-800 block">K. Anthonamma</span>
+                  <span className="text-[11px] text-slate-500">{isTelugu ? 'గుడివాడ' : 'Gudivada'}</span>
+                </div>
+                <span className="text-[10px] text-blue-700 font-bold bg-blue-50 px-2 py-0.5 rounded-full border border-blue-200">
+                  {isTelugu ? 'స్వస్థత సాక్ష్యం' : 'Healing Testimony'}
+                </span>
+              </div>
+            </div>
+
+            {/* Card 3: Career & Family Blessing */}
+            <div className="p-6 rounded-2xl bg-gradient-to-b from-amber-50/50 via-white to-white border border-amber-200 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 text-[10px] font-extrabold uppercase tracking-wider flex items-center gap-1">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>{isTelugu ? 'కుటుంబ క్షేమం & ఉద్యోగం' : 'Career & Peace'}</span>
+                  </span>
+                  <span className="text-amber-500 text-sm">★★★★★</span>
+                </div>
+                <h3 className="text-base font-bold text-slate-900">
+                  {isTelugu ? 'ఉద్యోగ సాఫల్యం & విదేశీ ప్రయాణం' : 'Career Blessing & Family Peace'}
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed italic">
+                  {isTelugu
+                    ? '"ఎన్నో ఏళ్లుగా నిలిచిపోయిన విదేశీ ఉద్యోగ వీసా మరియు కుటుంబ సమస్యలు మరియమాత పాదాల చెంత మోకరించి విన్నవించిన కొద్ది రోజుల్లోనే ఆటంకాలు తొలిగిపోయి మార్గం సుగమమైంది. తల్లికి హృదయపూర్వక కృతజ్ఞతలు."'
+                    : '"Long-standing career hurdles and overseas visa delays were cleared within days of bringing our prayers to Mother Mary. Our family continues to offer our heartfelt gratitude."'}
+                </p>
+              </div>
+
+              <div className="pt-3 border-t border-amber-100 flex items-center justify-between text-xs">
+                <div>
+                  <span className="font-bold text-slate-800 block">Francis & Family</span>
+                  <span className="text-[11px] text-slate-500">{isTelugu ? 'హైదరాబాద్ / యుకె' : 'Hyderabad / UK'}</span>
+                </div>
+                <span className="text-[10px] text-amber-700 font-bold bg-amber-50 px-2 py-0.5 rounded-full border border-amber-200">
+                  {isTelugu ? 'దీవెన సాక్ష్యం' : 'Answered Prayer'}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Share Testimony CTA Banner */}
+          <div className="p-5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-rose-500/10 to-amber-500/10 border border-amber-300 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3 text-center sm:text-left">
+              <div className="w-10 h-10 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center font-bold text-base shrink-0 shadow-2xs">
+                🙏
+              </div>
+              <div>
+                <h4 className="text-xs sm:text-sm font-bold text-slate-900">
+                  {isTelugu
+                    ? 'మీరు కూడా మరియమాత ద్వారా దీవెన లేదా స్వస్థత పొందారా?'
+                    : 'Have you received a blessing or healing through Mother Mary?'}
+                </h4>
+                <p className="text-[11px] text-slate-600">
+                  {isTelugu
+                    ? 'మీ కృతజ్ఞతా సాక్ష్యాన్ని పంపండి. పవిత్ర దివ్యబలిపూజలో మరియు ఈ వెబ్‌సైట్‌లో ప్రదర్శింపబడును.'
+                    : 'Share your testimony to be remembered during the holy mass and published on the portal.'}
+                </p>
+              </div>
+            </div>
+
+            <Link
+              to="/prayers"
+              className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-rose-600 to-amber-600 hover:from-rose-700 hover:to-amber-700 text-white font-bold text-xs shadow-md transition-all flex items-center gap-1.5 shrink-0 active:scale-95"
+            >
+              <Heart className="w-3.5 h-3.5 fill-white" />
+              <span>{isTelugu ? 'కృతజ్ఞతా సాక్ష్యం సమర్పించండి →' : 'Submit Thanksgiving Testimony →'}</span>
+            </Link>
           </div>
         </section>
 
