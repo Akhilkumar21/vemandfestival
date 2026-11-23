@@ -337,7 +337,7 @@ export const MediaUploadModal: React.FC<MediaUploadModalProps> = ({
                   />
                 )}
                 {uploadSuccessMedia.type === 'video' && (
-                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-slate-900/40 flex items-center justify-center">
                     <Play className="w-5 h-5 text-white fill-current" />
                   </div>
                 )}
@@ -461,7 +461,7 @@ export const MediaUploadModal: React.FC<MediaUploadModalProps> = ({
                   )}
 
                   {/* Top Bar with replace & remove */}
-                  <div className="absolute top-2 right-2 flex items-center gap-1.5 bg-black/60 backdrop-blur-xs p-1 rounded-xl text-white text-xs">
+                  <div className="absolute top-2 right-2 flex items-center gap-1.5 bg-slate-900/60 backdrop-blur-xs p-1 rounded-xl text-white text-xs">
                     <button
                       type="button"
                       onClick={() => {
@@ -484,7 +484,7 @@ export const MediaUploadModal: React.FC<MediaUploadModalProps> = ({
                   </div>
 
                   {/* Bottom Meta Bar */}
-                  <div className="w-full bg-slate-950/80 px-3 py-1.5 flex items-center justify-between text-[11px] text-slate-300">
+                  <div className="w-full bg-slate-800/80 px-3 py-1.5 flex items-center justify-between text-[11px] text-slate-200">
                     <span className="truncate max-w-[200px]">
                       {selectedFile ? selectedFile.name : sampleUrl ? 'Devotional Sample Media' : ''}
                     </span>

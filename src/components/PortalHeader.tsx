@@ -101,10 +101,10 @@ export const PortalHeader: React.FC<PortalHeaderProps> = ({
             </div>
             <div>
               <h1 className="text-base md:text-lg font-bold text-slate-900 tracking-wide group-hover:text-amber-800 transition-colors">
-                {isTelugu ? 'వేమండ జపమాల మహోత్సవాలు' : 'Vemanda Japamala Matha'}
+                {isTelugu ? 'వేమండ (Vemanda)' : 'Vemanda'}
               </h1>
               <p className="text-[11px] font-semibold text-amber-700 uppercase tracking-wider">
-                {isTelugu ? 'వార్షిక మహోత్సవాలు (అక్టోబర్ 27-30)' : 'Annual Feast (Oct 27-30)'}
+                {isTelugu ? 'గ్రామ సమాచారం & జపమాల మహోత్సవాలు' : 'Official Village & Feast Portal'}
               </p>
             </div>
           </Link>

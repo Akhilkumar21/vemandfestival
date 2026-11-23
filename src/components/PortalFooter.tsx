@@ -47,7 +47,7 @@ export const PortalFooter: React.FC<PortalFooterProps> = ({ notices, isTelugu })
                 <Church className="w-5 h-5" />
               </div>
               <span className="text-base font-bold text-slate-900 group-hover:text-amber-800 transition-colors">
-                {isTelugu ? 'వేమండ జపమాల మహోత్సవాలు' : 'Vemanda Japamala Matha'}
+                {isTelugu ? 'వేమండ (Vemanda)' : 'Vemanda'}
               </span>
             </Link>
             <p className="text-xs text-slate-600 leading-relaxed mb-3">

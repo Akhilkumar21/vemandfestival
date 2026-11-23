@@ -87,7 +87,13 @@ export const FlagsPage: React.FC<FlagsPageProps> = ({ data, isTelugu, searchQuer
       </div>
 
       {/* Main Flags Showcase Component */}
-      <FlagsShowcase flags={data.flags} isTelugu={isTelugu} searchQuery={searchQuery} />
+      <FlagsShowcase
+        flags={data.flags}
+        schedule={data.schedule}
+        dailyTradition={data.dailyTradition}
+        isTelugu={isTelugu}
+        searchQuery={searchQuery}
+      />
     </div>
   );
 };

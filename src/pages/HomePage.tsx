@@ -2,10 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FestivalData } from '../types/festival';
 import { FlagsShowcase } from '../components/FlagsShowcase';
-import { ScheduleTimeline } from '../components/ScheduleTimeline';
-import { VideoExperience } from '../components/VideoExperience';
-import { GalleryLightbox } from '../components/GalleryLightbox';
-import { CommunityMediaShowcase } from '../components/CommunityMediaShowcase';
 import { MediaUploadModal } from '../components/MediaUploadModal';
 import { MediaType } from '../types/media';
 import { SeoHead } from '../components/SeoHead';
@@ -28,6 +24,7 @@ import {
   MapPin,
   Upload,
   Users,
+  Film,
 } from 'lucide-react';
 
 interface HomePageProps {
@@ -85,8 +82,8 @@ export const HomePage: React.FC<HomePageProps> = ({ data, isTelugu, searchQuery 
       <SeoHead
         title={
           isTelugu
-            ? 'వేమండ (Vemanda) - గ్రామ అధికారిక సమాచారం & జపమాల మహోత్సవాలు | Unguturu, PIN 521311'
-            : 'Vemanda (వేమండ) - Official Village, Unguturu Mandal & Festival Portal | PIN 521311'
+            ? 'వేమండ (Vemanda) - గ్రామ అధికారిక పోర్టల్ | Unguturu, PIN 521311'
+            : 'Vemanda (వేమండ) - Official Village Portal | Unguturu Mandal, PIN 521311'
         }
         description={
           isTelugu
@@ -483,7 +480,7 @@ export const HomePage: React.FC<HomePageProps> = ({ data, isTelugu, searchQuery 
           </div>
         </section>
 
-        {/* Section 1: The 4 Sacred Flags */}
+        {/* Section 1: The 4 Sacred Flags & Day Liturgy Popup */}
         <section id="flags" className="relative">
           <div className="flex items-center justify-between mb-4">
             <span className="text-xs font-bold text-amber-700 uppercase tracking-widest">
@@ -497,24 +494,8 @@ export const HomePage: React.FC<HomePageProps> = ({ data, isTelugu, searchQuery 
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
-          <FlagsShowcase flags={data.flags} isTelugu={isTelugu} searchQuery={searchQuery} />
-        </section>
-
-        {/* Section 2: Day-by-Day Schedule Timeline */}
-        <section id="schedule" className="relative">
-          <div className="flex items-center justify-between mb-4">
-            <span className="text-xs font-bold text-blue-700 uppercase tracking-widest">
-              {isTelugu ? 'విభాగం 2' : 'Section 2'}
-            </span>
-            <Link
-              to="/schedule"
-              className="text-xs font-bold text-blue-700 hover:text-blue-900 flex items-center gap-1 group"
-            >
-              <span>{isTelugu ? 'పూర్తి కార్యక్రమ పేజీ చూడండి' : 'Dedicated Schedule Page'}</span>
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-          <ScheduleTimeline
+          <FlagsShowcase
+            flags={data.flags}
             schedule={data.schedule}
             dailyTradition={data.dailyTradition}
             isTelugu={isTelugu}
@@ -522,61 +503,175 @@ export const HomePage: React.FC<HomePageProps> = ({ data, isTelugu, searchQuery 
           />
         </section>
 
-        {/* Section 3: Video Experience Center */}
-        <section id="videos" className="relative">
-          <div className="flex items-center justify-between mb-4">
-            <span className="text-xs font-bold text-red-700 uppercase tracking-widest">
-              {isTelugu ? 'విభాగం 3' : 'Section 3'}
-            </span>
-            <Link
-              to="/videos"
-              className="text-xs font-bold text-red-700 hover:text-red-900 flex items-center gap-1 group"
-            >
-              <span>{isTelugu ? 'పూర్తి వీడియో పేజీ చూడండి' : 'Dedicated Videos Page'}</span>
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-          <VideoExperience videos={data.videos} isTelugu={isTelugu} searchQuery={searchQuery} />
-        </section>
+        {/* Section 2: Sacred Photos, Videos & Devotee Media Hub */}
+        <section id="media-hub" className="rounded-3xl bg-gradient-to-br from-amber-50/70 via-white to-blue-50/60 p-6 sm:p-8 md:p-10 shadow-md overflow-hidden relative border-2 border-amber-200/80">
+          {/* Subtle Decorative Background Accents */}
+          <div className="absolute top-0 right-0 w-80 h-80 bg-amber-300/15 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-300/15 rounded-full blur-3xl pointer-events-none" />
 
-        {/* Section 4: Photo Gallery & Lightbox */}
-        <section id="gallery" className="relative">
-          <div className="flex items-center justify-between mb-4">
-            <span className="text-xs font-bold text-emerald-700 uppercase tracking-widest">
-              {isTelugu ? 'విభాగం 4' : 'Section 4'}
-            </span>
-            <Link
-              to="/gallery"
-              className="text-xs font-bold text-emerald-700 hover:text-emerald-900 flex items-center gap-1 group"
-            >
-              <span>{isTelugu ? 'పూర్తి చిత్ర మాలిక పేజీ చూడండి' : 'Dedicated Gallery Page'}</span>
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-          <GalleryLightbox gallery={data.gallery} isTelugu={isTelugu} searchQuery={searchQuery} />
-        </section>
+          <div className="relative z-10 space-y-8">
+            {/* Header */}
+            <div className="text-center max-w-2xl mx-auto space-y-2">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100/90 border border-amber-300 text-amber-900 text-xs font-bold uppercase tracking-wider shadow-2xs">
+                <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                <span>{isTelugu ? 'పవిత్ర ఫోటోలు & వీడియోల వేదిక' : 'Sacred Photos & Video Center'}</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+                {isTelugu ? 'ఉత్సవ చిత్ర మాలిక & ప్రత్యక్ష వీడియోలు' : 'Feast Photo Gallery & Live Video Center'}
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-xl mx-auto">
+                {isTelugu
+                  ? 'జపమాల మాత పవిత్ర స్వరూపాలు, 60 అడుగుల విద్యుత్ ధ్వజస్తంభం, రథోత్సవ దృశ్యాలు మరియు భక్తుల సమర్పణలను ప్రత్యేక పేజీలలో పూర్తి స్క్రీన్‌లో వీక్షించండి.'
+                  : 'High-resolution shrine photos, live video highlights, and devotee captures available on dedicated full-screen viewing pages.'}
+              </p>
+            </div>
 
-        {/* Section 5: Devotee Community Media & Live Uploads */}
-        <section id="community-media" className="relative">
-          <div className="flex items-center justify-between mb-4">
-            <span className="text-xs font-bold text-amber-700 uppercase tracking-widest">
-              {isTelugu ? 'విభాగం 5' : 'Section 5'}
-            </span>
-            <Link
-              to="/community"
-              className="text-xs font-bold text-amber-700 hover:text-amber-900 flex items-center gap-1 group"
-            >
-              <span>{isTelugu ? 'భక్తుల వేదిక పూర్తి పేజీ చూడండి' : 'Dedicated Community Hub'}</span>
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            {/* 3 Clean Destination Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {/* Card 1: Sacred Photo Gallery */}
+              <div className="group rounded-2xl bg-gradient-to-b from-emerald-50/80 via-white to-white border-2 border-emerald-200/90 hover:border-emerald-500 p-5 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-md">
+                <div className="space-y-3">
+                  <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-500 text-white flex items-center justify-center shadow-md shadow-emerald-200 group-hover:scale-110 transition-transform">
+                    <ImageIcon className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-extrabold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 uppercase tracking-wider">
+                      {isTelugu ? 'హై-రెస్ ఆల్బమ్' : 'High-Res Album (13+)'}
+                    </span>
+                    <h3 className="text-base sm:text-lg font-bold text-slate-900 mt-2 group-hover:text-emerald-700 transition-colors">
+                      {isTelugu ? 'పవిత్ర చిత్ర మాలిక' : 'Sacred Photo Gallery'}
+                    </h3>
+                    <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                      {isTelugu
+                        ? 'జపమాల మాత మూలవిరాట్ స్వరూపం, ధ్వజస్తంభ శోభ, పుష్పాలంకరణ మరియు ఊరేగింపు చిత్రాలు.'
+                        : 'Mother Mary sacred statues, illuminated flag mast, floral decorations, and chariot procession.'}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pt-4 mt-4 border-t border-emerald-100">
+                  <Link
+                    to="/gallery"
+                    className="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-extrabold text-xs shadow-md shadow-emerald-200 transition-all flex items-center justify-center gap-2 active:scale-95"
+                  >
+                    <span>{isTelugu ? 'చిత్రాలు చూడండి (Show Photos) →' : 'Show Photos (Gallery) →'}</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Card 2: Festival Video Center */}
+              <div className="group rounded-2xl bg-gradient-to-b from-blue-50/80 via-white to-white border-2 border-blue-200/90 hover:border-blue-500 p-5 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-md">
+                <div className="space-y-3">
+                  <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center shadow-md shadow-blue-200 group-hover:scale-110 transition-transform">
+                    <Film className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-extrabold px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 uppercase tracking-wider">
+                      {isTelugu ? 'ప్రత్యక్ష వీడియోలు' : 'HD Video Clips (5+)'}
+                    </span>
+                    <h3 className="text-base sm:text-lg font-bold text-slate-900 mt-2 group-hover:text-blue-700 transition-colors">
+                      {isTelugu ? 'ఉత్సవ వీడియోల వేదిక' : 'Festival Video Center'}
+                    </h3>
+                    <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                      {isTelugu
+                        ? 'పతాక ఆవిష్కరణ, గాయక బృందం సంకీర్తనలు, మేళతాళాలు మరియు మహా తేరు ప్రదక్షిణ వీడియోలు.'
+                        : 'Flag hoistings, choir worship, traditional Melathalalu instruments, and street chariot.'}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pt-4 mt-4 border-t border-blue-100">
+                  <Link
+                    to="/videos"
+                    className="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-extrabold text-xs shadow-md shadow-blue-200 transition-all flex items-center justify-center gap-2 active:scale-95"
+                  >
+                    <span>{isTelugu ? 'వీడియోలు చూడండి (Watch Videos) →' : 'Watch Videos →'}</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Card 3: Devotee Community Hub & Direct Upload */}
+              <div className="group rounded-2xl bg-gradient-to-b from-amber-50/80 via-white to-white border-2 border-amber-200/90 hover:border-amber-500 p-5 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-md">
+                <div className="space-y-3">
+                  <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-600 text-white flex items-center justify-center shadow-md shadow-amber-200 group-hover:scale-110 transition-transform">
+                    <Users className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-extrabold px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 uppercase tracking-wider">
+                      {isTelugu ? 'భక్తుల సమర్పణలు' : 'Devotee Community'}
+                    </span>
+                    <h3 className="text-base sm:text-lg font-bold text-slate-900 mt-2 group-hover:text-amber-800 transition-colors">
+                      {isTelugu ? 'భక్తుల వేదిక & అప్‌లోడ్' : 'Devotee Media & Uploads'}
+                    </h3>
+                    <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                      {isTelugu
+                        ? 'మీరు తీసిన ఫోటోలు & వీడియోలను అప్‌లోడ్ చేసి ఇతర భక్తులతో పంచుకోండి మరియు లైక్ చేయండి.'
+                        : 'Upload your own shrine photos and videos directly from your phone and share blessings.'}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pt-4 mt-4 border-t border-amber-100 space-y-2">
+                  <Link
+                    to="/community"
+                    className="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-extrabold text-xs shadow-md shadow-amber-200 transition-all flex items-center justify-center gap-2 active:scale-95"
+                  >
+                    <span>{isTelugu ? 'భక్తుల వేదిక (Devotee Hub) →' : 'Devotee Media Hub →'}</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+
+                  <button
+                    onClick={() => handleOpenUpload('image')}
+                    className="w-full py-2 px-3 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-900 font-bold text-xs border border-amber-300 transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-2xs active:scale-95"
+                  >
+                    <Upload className="w-3.5 h-3.5 text-amber-700" />
+                    <span>{isTelugu ? '+ ఫోటో/వీడియో అప్‌లోడ్' : '+ Upload Photo or Video'}</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Unified Banner CTA */}
+            <div className="p-4 sm:p-5 rounded-2xl bg-white border border-amber-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="flex items-center gap-3 text-center sm:text-left">
+                <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center flex-shrink-0 font-bold shadow-2xs text-base">
+                  📸
+                </div>
+                <div>
+                  <h4 className="text-xs sm:text-sm font-bold text-slate-900">
+                    {isTelugu
+                      ? 'పూర్తి ఫోటోలు మరియు వీడియోలను ప్రత్యేక పేజీలలో చూడండి'
+                      : 'Explore Full Photos & Videos on Dedicated Pages'}
+                  </h4>
+                  <p className="text-[11px] text-slate-500">
+                    {isTelugu
+                      ? 'హోమ్‌పేజీని వేగవంతంగా మరియు సరళంగా ఉంచడానికి పూర్తి మీడియా ప్రత్యేక పేజీలలో అందుబాటులో ఉంది.'
+                      : 'Fast, clean, high-performance viewing with zero home page clutter.'}
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2 flex-wrap flex-shrink-0">
+                <Link
+                  to="/gallery"
+                  className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs shadow-md shadow-emerald-200 transition-all flex items-center gap-1.5 active:scale-95"
+                >
+                  <ImageIcon className="w-3.5 h-3.5" />
+                  <span>{isTelugu ? 'ఫోటోల పేజీ (Photos)' : 'Show Photos'}</span>
+                </Link>
+
+                <Link
+                  to="/videos"
+                  className="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs shadow-md shadow-blue-200 transition-all flex items-center gap-1.5 active:scale-95"
+                >
+                  <Film className="w-3.5 h-3.5" />
+                  <span>{isTelugu ? 'వీడియోల పేజీ (Videos)' : 'Show Videos'}</span>
+                </Link>
+              </div>
+            </div>
           </div>
-          <CommunityMediaShowcase
-            isTelugu={isTelugu}
-            searchQuery={searchQuery}
-            onOpenUploadModal={handleOpenUpload}
-            limit={6}
-            showHeader={true}
-          />
         </section>
 
         {/* Section 6: Devotional FAQ & Quick Answers */}
